@@ -4,5 +4,6 @@ public class hello{
   System.out.println("First GitHub Training");
   System.out.println("버그넣지마아아아아아");
   System.out.println("^오^");
+  System.out.println("3000");
   }
  }
