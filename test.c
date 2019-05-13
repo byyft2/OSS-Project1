@@ -5,6 +5,8 @@ int main()
     printf("hello world\n");
     printf("test\n");
     printf("test2\n");
-    printf("test3\n");}
-    }
+    printf("test3\n");
+
+    printf("branch\n");
+
 }
