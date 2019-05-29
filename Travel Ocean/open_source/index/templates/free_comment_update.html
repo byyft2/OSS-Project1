@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="ko">
+
+<head>
+{% block head %}
+  <meta charset="utf-8">
+  <title>Travel Ocean 자유게시판</title>
+{% endblock %}
+ 
+</head>
+
+<body>
+  {% block content %}
+
+    <form action="{% url 'free_comment_update' post.id %}" method="POST">
+        {% csrf_token %}
+    <h3>댓글 수정</h3>
+    <p>내용</p><textarea name="message" cols="30" rows="10">{{post.message}}</textarea>
+    <input type="submit" value="댓글 변경">
+        <input type="button" value="뒤로가기" onclick="history.back(-1);">
+    </form>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="{% static 'jquery.js' %}"></script>
+  <script src="{% static 'bootstrap.bundle.js' %}"></script>
+    {% endblock %}
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="ko">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link href="{% static 'main_style.css' %}" rel="stylesheet">
+    <style>
+      .logout {
+            background-color: #343a40 !important;
+            border: 0px;
+            cursor:pointer;
+        }
+    </style>
+{% block head %}
+{% endblock %}
+    </head>
+    <body>
+        <header>
+       
+         
+              <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="{% url 'main' %}">Travel Ocean</a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+  
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+         
+        <ul class="navbar-nav ml-auto">
+                    {% if not user.is_authenticated %}      
+            {% else %}
+              <li class="nav-item">  
+                   <form action="{% url 'signout' %}" method="POST">
+            {% csrf_token %}
+            <input type="submit" value="로그아웃" class="nav-link logout" > </form>
+          </li>
+                    {% endif %}
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'free_borad' %}">자유게시판</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">동행게시판</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownPortfolio" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              대륙선택
+            </a>
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownPortfolio">
+              <a class="dropdown-item" href="{% url 'europe' %}">유럽</a>
+              <a class="dropdown-item" href="portfolio-2-col.html">동남아시아</a>
+              <a class="dropdown-item" href="portfolio-3-col.html">아메리카</a>
+
+            </div>
+          </li>
+         
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+    
+        </header>
+    {% block content %}
+{% endblock %}
+    </body>

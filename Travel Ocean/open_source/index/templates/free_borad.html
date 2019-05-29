@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% block head %}<title>Travel Ocean 자유게시판</title>{% endblock %}
+</head>
+<body>
+    {% block content %}
+             <div class="container">
+    <h1 class="mt-4 mb-3"><b>자유게시판</b></h1>          
+          <form action="" method="GET">
+                <input type="text" name="list" >
+                <input type="submit" value="글찾기" class = "btn btn-default">
+          </form>
+    <div class="row">
+ </div>
+      <div class="container">
+      <table class ="table table-hover">
+        <thead>
+          <tr>
+            <th>번호</th>
+            <th>제목</th>
+            <th>작성자</th>
+            <th>작성한 날짜</th>
+            <th>댓글수</th>
+          
+          </tr>
+        </thead>
+        <tbody>
+        <tr>
+            {% for blog in posts %}
+          <td>{{ blog.id }}</td>
+          <td><a href="{% url 'free_borad_detail' blog.id %}">{{ blog.title }}</a></td>
+          <td>{{ blog.author }}</td>
+          <td>{{ blog.created_at }}</td>
+          <td>{{ blog.comments.count }}</td>
+        </tr>
+        </tbody>
+                      {% endfor %}
+
+      </table>
+          
+      <hr/>
+      <a class = "btn btn-default pull-right" href="{% url 'create' %}">글쓰기</a>
+      <div class = "text-center">
+          
+            {% if posts.has_previous %}
+             <a href="?page=1">First</a>
+            <a href="?page={{posts.previous_page_number}}">Previous</a>
+            {% endif %}
+          
+            <span>{{posts.number}}</span>
+            <span>of</span>
+            <span>{{posts.paginator.num_pages}}</span>
+          
+            {% if posts.has_next %}
+        <a href="?page={{posts.next_page_number}}">Next</a>
+          <a href="?page={{posts.paginator.num_pages}}">Last</a>
+            {% endif %}
+      </div>
+    </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="{% static 'jquery.js' %}"></script>
+  <script src="{% static 'bootstrap.bundle.js' %}"></script>
+    {% endblock %}
+</body>
+</html>

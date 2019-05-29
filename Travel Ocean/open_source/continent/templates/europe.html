@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+{% load staticfiles %}
+<html lang="en">
+
+<head>
+ {% block head %}
+
+  <title>Travel Ocean 대륙페이지 - 유럽</title>
+
+  {% endblock %}
+</head>
+
+<body>
+
+   {% block content %}
+
+  <!-- Page Content -->
+  <div class="container">
+
+    <!-- main > portfolio > column1 -->
+    <!-- Page Heading/Breadcrumbs -->
+    <h2 class="mt-4 mb-3"><small>대륙선택</small>  <!-- Portfolio 1-->>
+      <b>유럽</b>
+    </h2>
+
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item">
+        <a href="{% url 'main' %}">Home</a>
+      </li>
+      <li class="breadcrumb-item active">유럽</li>
+    </ol>
+
+    <!-- Project One -->
+    <div class="row">
+      <div class="col-md-7">
+        <a href="{% url 'german' %}">
+          <img src="{% static 'img/country/Germany.jpg' %}" alt="dan" width="600" height="290">
+        </a>
+      </div>
+      <div class="col-md-5">
+        <h3><b>독일</b></h3>
+        <p>독일 자연 경관은 매우 다양합니다. 북쪽에는 북해와 발트해 해안이 있고 남쪽에는 높은 알프스 산봉우리가 솟아 있습니다. 독일 중부 지방에서는 넓은 평지, 강, 바다, 숲, 도시, 구릉이 많은 낮은 산과 같은 다양한 자연 경관을 경험하실 수 있습니다. 독일의 가장 높은 산은 2,963 미터의 추크슈피체산입니다. </p>
+        <a class="btn btn-primary" href="{% url 'german' %}" onclick="location.href='danmark.html'">자세히 보기
+          <span class="glyphicon glyphicon-chevron-right"></span>
+        </a>
+      </div>
+    </div>
+    <!-- /.row -->
+
+    <hr>
+
+    <!-- Project Two -->
+    <div class="row">
+      <div class="col-md-7">
+        <a href="#">
+          <img src="{% static 'img/country/Denmark.jpg' %}" alt="dan" width="600" height="290">
+        </a>
+      </div>
+      <div class="col-md-5">
+        <h3><b>덴마크</b></h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, odit velit cumque vero doloremque repellendus distinctio maiores rem expedita a nam vitae modi quidem similique ducimus! Velit, esse totam tempore.</p>
+        <a class="btn btn-primary" href="#">자세히 보기
+          <span class="glyphicon glyphicon-chevron-right"></span>
+        </a>
+      </div>
+    </div>
+    <!-- /.row -->
+
+    <hr>
+
+    <!-- Project Three -->
+    <div class="row">
+      <div class="col-md-7">
+        <a href="#">
+          <img src="{% static 'img/country/England.jpg' %}" alt="" width="600" height="290">
+        </a>
+      </div>
+      <div class="col-md-5">
+        <h3><b>영국</b></h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis, temporibus, dolores, at, praesentium ut unde repudiandae voluptatum sit ab debitis suscipit fugiat natus velit excepturi amet commodi deleniti alias possimus!</p>
+        <a class="btn btn-primary" href="#">View Project
+          <span class="glyphicon glyphicon-chevron-right"></span>
+        </a>
+      </div>
+    </div>
+    <!-- /.row -->
+
+  
+    <hr>
+
+
+  </div>
+  <!-- /.container -->
+
+  <!-- Footer -->
+  <footer class="py-5 bg-dark">
+    <div class="container">
+      <p class="m-0 text-center text-white"> </p>
+    </div>
+    <!-- /.container -->
+  </footer>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="{% static 'jquery.js' %}"></script>
+  <script src="{% static 'bootstrap.bundle.js' %}"></script>
+ {% endblock %}
+</body>
+
+</html>

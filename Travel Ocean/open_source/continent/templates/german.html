@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+{% load staticfiles %}
+<html lang="en">
+
+<head>
+    {% block head %}
+
+  <title>Travel Ocean 유럽 - 독일</title>
+    
+  {% endblock %}
+</head>
+
+<body>
+  {% block content %}
+  
+
+  <div class="container">
+
+    <!-- Page Heading/Breadcrumbs -->
+    <h1 class="mt-4 mb-3">독일
+      <small><span style="color:black">Deut<span style="color:red">sch</span><span style="color:yellow">land</span>    
+    </span>
+            
+            </small>
+    </h1>
+
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item">
+        <a href="{% url 'main' %}">Home</a>
+      </li>
+      <li class="breadcrumb-item active">Deutschland</li>
+    </ol>
+
+    <!-- Intro Content -->
+    <div class="row">
+      <div class="col-lg-6">
+        <img class="img-fluid rounded mb-4" src="{% static 'img/country/Germany.jpg' %}" alt="">
+      </div>
+      <div class="col-lg-6">
+        <h2>아름답고 맛있는 나라</h2>
+        <br>
+        <div style='line-height:200%'>
+        <p>독일 자연 경관은 매우 다양합니다. 북쪽에는 북해와 발트해 해안이 있고 남쪽에는 높은 알프스 산봉우리가 솟아 있습니다. 독일 중부 지방에서는 넓은 평지, 강, 바다, 숲, 도시, 구릉이 많은 낮은 산과 같은 다양한 자연 경관을 경험하실 수 있습니다. 독일의 가장 높은 산은 2,963 미터의 추크슈피체산입니다. 가장 긴 강은 독일을 가로지르는 865Km의 라인강입니다. 독일에는 국립 공원 16개와 자연 공원 104개, 생물권 보호지역이 15개 있습니다.</p>
+        <p>그리고 독일하면 떠오르는 것은? 바로 소시지와 맥주입니다. 그외에도 프레첼 , 슈니첼같이 맛있는 음식이 있습니다.</p>
+        
+    </div>
+      </div>
+    </div>
+    <!-- /.row -->
+
+    <!-- Team Members -->
+    <h2>알아두세요!</h2>
+
+    <div class="row">
+      <div class="col-lg-4 mb-4">
+        <div class="card h-100 text-center">
+          <img class="card-img-top" src="{% static 'img/country/Donottakeit.jpg' %}" alt="">
+          <div class="card-body">
+            
+            <h4 class="card-title">가져가지 말아야 할것</h4>
+            
+            <p class="card-text">1.의약품 및 마약<br>2.많은 현금<br>3.불꽃<font size="2em">(폭발물 법 법의 조항이있다네요)</font><br>4.위험한 개<br></p>
+          
+         </div> 
+        </div>
+      </div>
+      <div class="col-lg-4 mb-4">
+        <div class="card h-100 text-center">
+          <img class="card-img-top" src="{% static 'img/country/manner.jpg' %}" alt="">
+          <div class="card-body">
+            <h4 class="card-title">지켜야할 매너</h4>
+            <p class="card-text">1.포장할 때 흰색,검정색,갈색 포장지는 피해주세요. 장례식을 연상케 합니다.<br><br>2.독일인과 만날때마다 식사했냐고 물어보면 먹는거밖에 모르는 사람으로 오해받을 수 있어요.<br><br>3.대화중에 주머니에 손을 넣는것은 무례한 행동이에요!<font size="2em">(어디서든 마찬가지겠죠?!)</font></p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 mb-4">
+        <div class="card h-100 text-center">
+          <img class="card-img-top" src="http://placehold.it/750x450" alt="">
+          <div class="card-body">
+            <h4 class="card-title">현지법과 규범</h4>
+            <h6 class="card-subtitle mb-2 text-muted">Position</h6>
+            <p class="card-text">적어라</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /.row -->
+
+    
+    <h2>대표 음식</h2>
+
+    <div class="row">
+      <div class="col-lg-4 mb-4">
+        <div class="card h-100 text-center">
+          <img class="card-img-top" src="http://placehold.it/750x450" alt="">
+          <div class="card-body">
+            <h4 class="card-title">음식 적어라</h4>
+            <h6 class="card-subtitle mb-2 text-muted">Position</h6>
+            <p class="card-text">음식 부가설명 적어라</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 mb-4">
+        <div class="card h-100 text-center">
+          <img class="card-img-top" src="http://placehold.it/750x450" alt="">
+          <div class="card-body">
+            <h4 class="card-title">음식 적어라</h4>
+            <h6 class="card-subtitle mb-2 text-muted">Position</h6>
+            <p class="card-text">음식 부가설명 적어라</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 mb-4">
+        <div class="card h-100 text-center">
+          <img class="card-img-top" src="http://placehold.it/750x450" alt="">
+          <div class="card-body">
+            <h4 class="card-title">ㅇㅅ ㅈㅇㄹ</h4>
+            <h6 class="card-subtitle mb-2 text-muted">Position</h6>
+            <p class="card-text">ㅇㅅㅂㄳㅁㅈㅇㄹ</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <h2>놀거리</h2>
+
+    <div class="row">
+      <div class="col-lg-4 mb-4">
+        <div class="card h-100 text-center">
+          <img class="card-img-top" src="http://placehold.it/750x450" alt="">
+          <div class="card-body">
+            <h4 class="card-title">Team Member</h4>
+            <h6 class="card-subtitle mb-2 text-muted">Position</h6>
+            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus aut mollitia eum ipsum fugiat odio officiis odit.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 mb-4">
+        <div class="card h-100 text-center">
+          <img class="card-img-top" src="http://placehold.it/750x450" alt="">
+          <div class="card-body">
+            <h4 class="card-title">Team Member</h4>
+            <h6 class="card-subtitle mb-2 text-muted">Position</h6>
+            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus aut mollitia eum ipsum fugiat odio officiis odit.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 mb-4">
+        <div class="card h-100 text-center">
+          <img class="card-img-top" src="http://placehold.it/750x450" alt="">
+          <div class="card-body">
+            <h4 class="card-title">Team Member</h4>
+            <h6 class="card-subtitle mb-2 text-muted">Position</h6>
+            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus aut mollitia eum ipsum fugiat odio officiis odit.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <h2>알아두면 좋아요!</h2>
+
+    <div class="row">
+      <div class="col-lg-4 mb-4">
+        <div class="card h-100 text-center">
+          <img class="card-img-top" src="http://placehold.it/750x450" alt="">
+          <div class="card-body">
+            <h4 class="card-title">문화</h4>
+            <h6 class="card-subtitle mb-2 text-muted">Position</h6>
+            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus aut mollitia eum ipsum fugiat odio officiis odit.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 mb-4">
+        <div class="card h-100 text-center">
+          <img class="card-img-top" src="http://placehold.it/750x450" alt="">
+          <div class="card-body">
+            <h4 class="card-title">기후</h4>
+            <h6 class="card-subtitle mb-2 text-muted">Position</h6>
+            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus aut mollitia eum ipsum fugiat odio officiis odit.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 mb-4">
+        <div class="card h-100 text-center">
+          <img class="card-img-top" src="http://placehold.it/750x450" alt="">
+          <div class="card-body">
+            <h4 class="card-title">사용하는 언어</h4>
+            <h6 class="card-subtitle mb-2 text-muted">Position</h6>
+            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus aut mollitia eum ipsum fugiat odio officiis odit.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+    <h2>조심하세요!</h2>
+
+    <div class="row">
+      <div class="col-lg-4 mb-4">
+        <div class="card h-100 text-center">
+          <img class="card-img-top" src="http://placehold.it/750x450" alt="">
+          <div class="card-body">
+            <h4 class="card-title">사기 수법1</h4>
+            <h6 class="card-subtitle mb-2 text-muted">Position</h6>
+            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus aut mollitia eum ipsum fugiat odio officiis odit.</p>
+          </div>
+          
+        </div>
+      </div>
+      <div class="col-lg-4 mb-4">
+        <div class="card h-100 text-center">
+          <img class="card-img-top" src="http://placehold.it/750x450" alt="">
+          <div class="card-body">
+            <h4 class="card-title">덤탱이 예</h4>
+            <h6 class="card-subtitle mb-2 text-muted">Position</h6>
+            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus aut mollitia eum ipsum fugiat odio officiis odit.</p>
+          </div>
+          
+        </div>
+      </div>
+      <div class="col-lg-4 mb-4">
+        <div class="card h-100 text-center">
+          <img class="card-img-top" src="http://placehold.it/750x450" alt="">
+          <div class="card-body">
+            <h4 class="card-title">적어라</h4>
+            <h6 class="card-subtitle mb-2 text-muted">Position</h6>
+            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus aut mollitia eum ipsum fugiat odio officiis odit.</p>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+    <!-- /.row -->
+
+    </div>
+  <!-- Footer -->
+  <footer class="py-5 bg-dark">
+    <div class="container">
+      <p class="m-0 text-center text-white"></p>
+    </div>
+    <!-- /.container -->
+  </footer>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="{% static 'jquery.js' %}"></script>
+  <script src="{% static 'bootstrap.bundle.js' %}"></script>
+ {% endblock %}
+</body>
+
+</html>
