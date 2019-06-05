@@ -41,11 +41,14 @@
             <input type="submit" value="로그아웃" class="nav-link logout" > </form>
           </li>
                     {% endif %}
+            <li class="nav-item">
+            <a class="nav-link" href="{% url 'package' %}">해외패키지</a>
+          </li>
           <li class="nav-item">
             <a class="nav-link" href="{% url 'free_borad' %}">자유게시판</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="contact.html">동행게시판</a>
+            <a class="nav-link" href="{% url 'drawChart' %}">동행게시판</a>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownPortfolio" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

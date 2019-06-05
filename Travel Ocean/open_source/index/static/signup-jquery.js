@@ -1,4 +1,4 @@
- // window.addEventListener('load', function() {
+// window.addEventListener('load', function() {
  // var signup = document.querySelector('#signup');
 		
  // signup.addEventListener('click', function() {

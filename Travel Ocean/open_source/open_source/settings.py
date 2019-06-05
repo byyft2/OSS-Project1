@@ -27,7 +27,6 @@ DEBUG = True
 
 ALLOWED_HOSTS = [".goorm.io"]
 
-
 # Application definition
 
 AUTH_USER_MODEL = 'index.User'
@@ -41,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'index.apps.IndexConfig',
     'continent.apps.ContinentConfig',
+    'company.apps.CompanyConfig',
 ]
 
 MIDDLEWARE = [

@@ -1,8 +1,21 @@
 {% extends 'base.html' %}
+{% load staticfiles %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     {% block head %}<title>Travel Ocean 자유게시판</title>
+    <link href="https://fonts.googleapis.com/css?family=Anton&display=swap&subset=latin-ext,vietnamese" rel="stylesheet">
+     <style>
+      p {
+        font-family: 'Anton', sans-serif;
+        font-size: 80px;
+        text-indent: 1em;
+      }
+          </style>
+    <h1>
+       <p class="p">                 New Post</p>
+    </h1>
     {% endblock %}
 </head>
 <body>

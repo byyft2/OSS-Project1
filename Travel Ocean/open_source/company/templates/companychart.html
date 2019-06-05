@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html>
+  <head>
+      <style type="text/css">
+#static1
+{
+width:2000px;
+height:100px;
+position: static;
+          }</style>
+      <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link href="{% static 'main_style.css' %}" rel="stylesheet">
+    <style>
+      .logout {
+            background-color: #343a40 !important;
+            border: 0px;
+            cursor:pointer;
+        }
+        a.relative{
+            background-color: #FA58F4;
+      border-bottom:5px solid #165195;
+            color: white;
+            position: relative;
+             left: 228px;
+             bottom: 54px;
+            text-decoration: none;
+      font-size:2rem;
+      color:white;
+      padding:10px 20px 10px 20px;
+      margin:20px;
+      display:inline-block;
+      border-radius: 10px;
+      transition:all 0.1s;
+      text-shadow: 0px -2px rgba(0, 0, 0, 0.44);
+            font-family: 'Lobster', Fantasy;
+        }
+    </style>
+{% block head %}
+{% endblock %}
+   <!-- {% if continent_list %}-->
+    
+        
+    
+    <!--{% endif %}--> 
+      <!--Load the AJAX API-->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+
+      // Load the Visualization API and the piechart package.
+      google.charts.load('current', {'packages':['corechart']});
+
+      // Set a callback to run when the Google Visualization API is loaded.
+      google.charts.setOnLoadCallback(drawChart);
+
+      // Callback that creates and populates a data table, 
+      // instantiates the pie chart, passes in the data and
+      // draws it.
+      function drawChart() {
+
+          
+      // Create the data table.
+      
+
+      var data = new google.visualization.DataTable();
+      data.addColumn('string', 'Topping');
+      data.addColumn('number', 'Slices');
+      data.addRows([
+        ['asia', 1],
+        ['oceania', 1],
+        ['africa', 1], 
+        ['europe', 1],
+        ['america', 2],
+        
+      ]);
+
+      // Set chart options
+      var options = {'title':'여러 사람들이 동행을 구하고 있어요!',
+                     'width':1000,
+                     'height':700};
+
+      // Instantiate and draw our chart, passing in some options.
+      var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
+      chart.draw(data, options);
+    }
+
+    </script>
+  </head>
+
+  <body>
+<!--Div that will hold the pie chart-->
+      <header>
+       
+         
+              <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="{% url 'main' %}">Travel Ocean 동행게시판</a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+  
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+         
+        <ul class="navbar-nav ml-auto">
+                    {% if not user.is_authenticated %}      
+            {% else %}
+              <li class="nav-item">  
+                   <form action="{% url 'signout' %}" method="POST">
+            {% csrf_token %}
+            <input type="submit" value="로그아웃" class="nav-link logout" > </form>
+          </li>
+                    {% endif %}
+            <li class="nav-item">
+            <a class="nav-link" href="{% url 'package' %}">해외패키지</a>
+          </li>
+ 
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'free_borad' %}">자유게시판</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'drawChart' %}">동행게시판</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownPortfolio" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              대륙선택
+            </a>
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownPortfolio">
+              <a class="dropdown-item" href="{% url 'europe' %}">유럽</a>
+              <a class="dropdown-item" href="portfolio-2-col.html">동남아시아</a>
+              <a class="dropdown-item" href="portfolio-3-col.html">아메리카</a>
+
+            </div>
+          </li>
+         
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+    
+        </header>
+       
+    <div id="chart_div" style="width:400; height:300"></div>
+      <a class = "relative" href="{% url 'companytest' %}" >동행을 찾아보자!</a>
+   
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="{% static 'jquery.js' %}"></script>
+  <script src="{% static 'bootstrap.bundle.js' %}"></script>
+
+  </body>
+</html>

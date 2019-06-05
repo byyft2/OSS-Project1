@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% block head %}<title>Travel Ocean 정보수정</title>
+    <link href="https://fonts.googleapis.com/css?family=Anton&display=swap&subset=latin-ext,vietnamese" rel="stylesheet">
+     <style>
+      p {
+        font-family: 'Anton', sans-serif;
+        font-size: 80px;
+        text-indent: 1em;
+      }
+          </style>
+    <h1>
+       <p class="p">개인 정보 수정</p>
+    </h1>
+    {% endblock %}
+</head>
+<body>
+    {% block content %}
+    <!-- input 태그에 적은 값으로 새로운 blog를 만들어 저장하므로(변화가 일어남), POST 방식 사용 -->
+    <br>
+    <form action="{% url 'testgogogo' %}" method="POST" enctype="multipart/form-data">
+        <table>
+            {{talk}}
+        {% csrf_token %}
+        {{ form.as_table }}
+        
+        </table>
+        새 비밀번호: <input type="password" id="pw1" name="pw1"><br>
+        한번더 입력: <input type="password" id="pw2" name="pw2">
+          <input type="submit"> 
+    </form>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="{% static 'jquery.js' %}"></script>
+  <script src="{% static 'bootstrap.bundle.js' %}"></script>
+    {% endblock %}
+</body>
+</html>

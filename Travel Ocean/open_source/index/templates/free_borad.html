@@ -1,4 +1,6 @@
 {% extends 'base.html' %}
+{% load staticfiles %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,7 +11,7 @@
              <div class="container">
     <h1 class="mt-4 mb-3"><b>자유게시판</b></h1>          
           <form action="" method="GET">
-                <input type="text" name="list" >
+                <input type="text" name="list">
                 <input type="submit" value="글찾기" class = "btn btn-default">
           </form>
     <div class="row">
@@ -40,7 +42,7 @@
 
       </table>
           
-      <hr/>
+      <hr/> 
       <a class = "btn btn-default pull-right" href="{% url 'create' %}">글쓰기</a>
       <div class = "text-center">
           
