@@ -4,15 +4,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    {% block head %}<title>Travel Ocean 동행게시판</title>{% endblock %}
+    {% block head %}<title>Travel Ocean 동행게시판</title>
+    <link href="https://fonts.googleapis.com/css?family=Anton&display=swap&subset=latin-ext,vietnamese" rel="stylesheet">
+    <style>
+    p {
+        font-family: 'Anton', sans-serif;
+        font-size: 80px;
+        text-indent: 1em;
+      }
+    </style>{% endblock %}
 </head>
 <body>
     {% block content %}
              <div class="container">
-    <h1 class="mt-4 mb-3"><b>동행게시판</b></h1>          
+    <h1>
+       <p class="p" id="item">
+Companion board</p>
+    </h1>          
           <form action="">
                 <input type="text" name="list" >
-                <input type="submit" value="글찾기" class = "btn btn-default">
+                <input style="width:150px; height:10px; letter-spacing: 1px" type="submit" value="제목으로 검색" class = "btn btn-default">
+          </form>
+        
+            <form action="">
+                <input type="text" name="countrylist" >
+                <input style="width:150px; height:10px; letter-spacing: 1px" type="submit" value="나라이름 검색" class = "btn btn-default">
           </form>
     <div class="row">
  </div>

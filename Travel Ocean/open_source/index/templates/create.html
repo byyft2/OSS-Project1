@@ -11,10 +11,18 @@
         font-family: 'Anton', sans-serif;
         font-size: 80px;
         text-indent: 1em;
+          position: relative;
+             left: 465px;
+             top: 10px;
       }
+         input.submit{
+             position: relative;
+             left: 325px;
+             top: 10px;
+         }
           </style>
     <h1>
-       <p class="p">                 New Post</p>
+       <p>                 New Post</p>
     </h1>
     {% endblock %}
 </head>
@@ -27,8 +35,20 @@
         {% csrf_token %}
         {{ form.as_table }}
         </table>
-          <input type="submit"> 
+          <input type="submit"  style="width:700px;height:60px;" value="작성하기"> 
+              <input type="button" style="width:700px;height:60px;"  value="뒤로가기" onclick="history.back(-1);">
     </form>
+    <script>window.onload=function()
+        {
+            var x = document.getElementsByName('title')[0];
+            x.style.width = "1300px";
+            x.style.height ="40px";
+            var y = document.getElementsByName('content')[0];
+           y.style.width = "1300px";
+          y.style.height ="400px";
+          y.style.resize="none";  
+        }</script>
+    
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script src="{% static 'jquery.js' %}"></script>
   <script src="{% static 'bootstrap.bundle.js' %}"></script>

@@ -12,9 +12,24 @@
         font-size: 80px;
         text-indent: 1em;
       }
+      input.PC{
+             position: relative;
+             right: 186px;
+             top: 40px;
+         }
+      input.CP{
+             position: relative;
+             left: 280px;
+             bottom: 29px;
+         }
+         input.rewrite{
+             position: relative;
+             right: 181px;
+             bottom: 29px;
+         }
           </style>
     <h1>
-       <p class="p">개인 정보 수정</p>
+       <p class="p">Edit personal information</p>
     </h1>
     {% endblock %}
 </head>
@@ -27,12 +42,71 @@
             {{talk}}
         {% csrf_token %}
         {{ form.as_table }}
+            {{msg}}
+            {{pw_msg}}
+
         
         </table>
         새 비밀번호: <input type="password" id="pw1" name="pw1"><br>
         한번더 입력: <input type="password" id="pw2" name="pw2">
-          <input type="submit"> 
+          <input type="submit" style="width:182px;" class="PC" id="complete" disabled='disabled' value="수정하기">
+        <input type="button" class="rewrite" style="width:135px;height:30px;" onclick="rewrite()" value="비밀번호 재설정">
+        <div id="notEqual" style="display:none">
+            비밀번호가 동일하지 않습니다.
+        </div>
+        <div id="notLength" style="display:none">
+            비밀번호는 8자 이상으로 해주세요.
+        </div>
     </form>
+    <input type="button" class="CP" onclick="passwordcheck()" value ="비밀번호 확인">
+    <script>
+        function rewrite(){
+            document.getElementById("pw1").value="";
+            document.getElementById("pw2").value="";
+            document.getElementById("complete").disabled = true;
+            document.getElementById("pw2").readOnly=false;
+            document.getElementById("pw1").readOnly=false;
+        }
+        
+        function passwordcheck(){
+            var a = document.getElementById("pw1").value;
+            var b = document.getElementById("pw2").value;
+            var c = document.getElementById("pw1");
+            var d = document.getElementById("pw2");
+            if (a != b){
+                document.getElementById("notLength").style.display="none";
+                document.getElementById("notEqual").style.display="block";
+                document.getElementById("pw1").value="";
+                document.getElementById("pw2").value="";
+            }
+            else if(a == b){
+                if(a.length < 8){
+                    document.getElementById("notEqual").style.display="none";
+                    document.getElementById("notLength").style.display="block";
+                    document.getElementById("pw1").value="";
+                    document.getElementById("pw2").value="";
+                }
+                else{
+                document.getElementById("notEqual").style.display="none";
+                 document.getElementById("complete").disabled = false;
+                c.readOnly="true";
+                d.readOnly="true";
+                }
+            }
+            
+        
+        }
+    </script>
+    <script>window.onload=function()
+        {
+            //var a =  document.getElementsByName('username')[0];
+            //a.readOnly="true";
+            document.getElementsByName('username')[0].readOnly="true";
+            document.getElementsByName('name')[0].readOnly="true";
+            //document.getElementsByName('phone')[0].readOnly="true";
+            document.getElementsByName('birth')[0].readOnly="true";
+            //document.getElementsByName('email')[0].readOnly="true";
+        }</script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script src="{% static 'jquery.js' %}"></script>
   <script src="{% static 'bootstrap.bundle.js' %}"></script>

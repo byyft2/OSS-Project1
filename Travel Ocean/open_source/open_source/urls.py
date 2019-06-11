@@ -44,8 +44,7 @@ urlpatterns = [
     path('testgogo/<int:id>', index.views.testgogo, name="testgogo"),
     path('testgogogo/', index.views.testgogogo, name="testgogogo"),
     path('testgogogogo/',index.views.testgogogogo,name="testgogogogo"),
-    path('updateuser', index.views.updateuser, name="updateuser"),
-  
+    path('update_user/<int:id>', index.views.update_user, name="update_user"),
 ]
 
 urlpatterns += static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)

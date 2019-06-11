@@ -19,7 +19,12 @@
          input.relative{
              position: relative;
              left: 852px;
-             bottom: 300px;
+             bottom: 320px;
+         }
+         input.relative1{
+             position: relative;
+             left: 45px;
+             bottom: 50px;
          }
          select.relative{
              position: relative;
@@ -64,13 +69,13 @@
     <br>
     <form method="POST" action="{%url 'continentcreate'%}">
     {% csrf_token %}
-    제목 : <input style="width:1458px; height:50px; letter-spacing: 1px" type="text" name="title"><br><br>
+    제목 : <input style="width:1458px; height:50px; letter-spacing: 1px" type="text" name="title" value=><br><br>
     내용 :<textarea style="resize: none;" name="content" cols="200" rows="10"></textarea><br><br>
     대륙 : <input type="text" id='test' name="continent_name" readonly>  <input style="width:100px;height:30px;" type="button" onclick="asia(); gogo()" value="아시아">
         <input type="button" style="width:100px;height:30px;" onclick="africa(); africagogo()" value="아프리카">  <input style="width:100px;height:30px;" type="button" onclick="europe(); youlovegogo()" value="유럽">  <input type="button" style="width:100px;height:30px;" onclick="america(); americanogogo()" value="아메리카">  <input style="width:100px;height:30px;" type="button" onclick="oceania(); oceangogo()" value="오세아니아">  <input style="width:100px;height:30px;" type="button" onclick="namgk(); mangkgogo()" value="남극"><br><br>
     나라 : <input type="text" id="country1" name="country" readonly><br><br>
-    컨셉 : <input type="text" name="concept"><br><br>
-    출발 : <input type="date" name="startday"><br><br>
+    컨셉 : <input type="text" name="concept" value={{obj.concept}}><br><br>
+    출발 : <input type="date" name="startday">{{msg}}<br><br>
     복귀 : <input type="date" name="comebackday"><br><br>
         <select id="aseea" class="relative" style="width:100px;height:30px;"  disabled = True>
   <option>대한민국</option>
@@ -150,8 +155,17 @@
         
 <br><br>
     
-    <input type="submit" name="btn1" value="값넣기";>
+    <input class ="relative1" style="width:165px;height:50px;" type="submit" name="btn1" value="작성하기";>
+                      <input class ="relative1" type="button" style="width:165px;height:50px;"  value="뒤로가기" onclick="history.back(-1);">
+
+        
 </form>
+    <!--
+        {% csrf_token %}
+    <input type="submit" value="새창띄우기">
+        
+    </form>
+    --->
     <input type="button"  onclick="choice()" value="나라 선택" class="relative">
      <script language="javascript">
          function choice() {

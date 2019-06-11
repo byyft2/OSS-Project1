@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+{% load staticfiles %}
+<html lang="en">
+
+<head>
+    {% block head %}
+
+  <title>Travel Ocean 유럽 - 독일</title>
+    
+  {% endblock %}
+</head>
+
+<body>
+  {% block content %}
+  
+
+  <div class="container">
+
+    <!-- Page Heading/Breadcrumbs -->
+    <h1 class="mt-4 mb-3">독일
+      <small><span style="color:black">German    
+    </span>
+            
+            </small>
+    </h1>
+
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item">
+        <a href="{% url 'main' %}">Home</a>
+      </li>
+      <li class="breadcrumb-item active">Deutschland</li>
+    </ol>
+
+    <!-- Intro Content -->
+    <div class="row">
+      <div class="col-lg-6">
+        <img class="img-fluid rounded mb-4" src="{% static 'img/country/Germany/Germany.jpg' %}" alt="">
+      </div>
+      <div class="col-lg-6">
+        <div style='line-height:200%'>
+        <p>독일 자연 경관은 매우 다양합니다. 북쪽에는 북해와 발트해 해안이 있고 남쪽에는 높은 알프스 산봉우리가 솟아 있습니다. 독일 중부 지방에서는 넓은 평지, 강, 바다, 숲, 도시, 구릉이 많은 낮은 산과 같은 다양한 자연 경관을 경험하실 수 있습니다. 독일의 가장 높은 산은 2,963 미터의 추크슈피체산입니다. 가장 긴 강은 독일을 가로지르는 865Km의 라인강입니다. 독일에는 국립 공원 16개와 자연 공원 104개, 생물권 보호지역이 15개 있습니다.</p>
+        <p>그리고 독일하면 떠오르는 것은? 바로 소시지와 맥주입니다. 그외에도 프레첼 , 슈니첼같이 맛있는 음식이 있습니다.</p>
+        
+    </div>
+      </div>
+    </div>
+    <!-- /.row -->
+
+    <!-- Team Members -->
+     <h2>꿀팁 & 주의할 점</h2>
+
+    <div class="row">
+      <div class="col-lg-4 mb-4">
+        <div class="card h-100 text-center">
+          <img class="card-img-top" src="{% static 'img/country/Germany/Germany_1.jpg' %}" alt="">
+          <div class="card-body">
+            <p class="card-text">1. 거리 보행이나 대중교통 이용 시 뛰거나 앞 사람을 밀어서는 안 되며 떠들어서도 안 된다.<br><br>
+              2. 독일의 사우나 혹은 탕문화는 혼욕이며 무엇을 입고 들어갈 수가 없다. 다른 사람을 계속 쳐다보는 행동 등은 민폐가 될 수 있으며
+              독일 사람들은 탕에 들어갈 때 대부분 눈을 감고 있거나 아예 다른 곳을 응시하고 있어서 상대에게 확실히 보고 있지 않다는 느낌을 충분히 준다.<br><br>
+              3. 작센안할트, 브란덴부르크, 튀링켄, 작센 등 구 동독 지역은 외국인 혐오증이나 최근 IS테러 등으로 유럽 전체 분위기가 흉흉하므로
+              이러한 지역에서 밤 늦게 돌아다니거나 젊은이들이 모여있는 곳은 피하는 것이 좋다.</p>
+         </div> 
+        </div>
+      </div>
+      <div class="col-lg-4 mb-4">
+        <div class="card h-100 text-center">
+          <img class="card-img-top" src="{% static 'img/country/Germany/Germany_2.jpg' %}" alt="">
+          <div class="card-body">
+            <p class="card-text">4. 야간열차에서 소매치기가 잦은 편이라고 알려져 있으니 열차 탑승시 주의해야 한다.<br><br>
+              5. 차를 특별히 렌트하지 않은 경우, 장거리 이동은 기차로 하는 경우가 많다. 따라서 기차타는 법이나 티켓 끊는 방법 등을 사전에 알고가면 좋다.
+              자리에 앉을 때 예약이 되어있는 자리는 램프가 들어와 있으니 앉으면 안 된다.<br><br>
+              6. 독일은 자동차 강국이며 국민들이 법규를 잘 지킨다. 횡단보도에 사람이 서 있으면 양 방향의 차들은 모두 멈춰서 사람이 지나가길 기다린다.
+              가장 조심해야하는 것은 자전거 전용도로이다. 모르고 침범했다가 자전거를 치는 경우를 유의해야 한다. 모든 우회전은 신호를 받고 가야한다.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 mb-4">
+        <div class="card h-100 text-center">
+          <img class="card-img-top"  src="{% static 'img/country/Germany/Germany_3.jpg' %}" alt="">
+          <div class="card-body">
+            <p class="card-text">7.통행시 서로 신체가 부딪히는 것을 매우 꺼려하며, 기침이나 재채기를 할 경우 반드시 손수건이나 휴지로 입을 막아 주위에 해가 되지 않도록
+              주의해야 한다.<br><br>
+              8. 식당에서는 계산서에 나온 금액의 5~10%를 팁으로 주는 것이 보통이며, 카드 결제 시 팁을 잔돈으로 따로 주거나 카드명세서의 서비스액란에 따로
+              기입하여 결제하는 방법도 있다.<br><br>
+              9. 다중이용시설 내에 방치된 가방이나 상자, 봉투 등이 발견될 경우 절대로 개봉하거나 가까이 하지 말고 가까운 경찰기관에 신고해야 한다.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /.row -->
+<br>
+    
+    <h2>대표 음식</h2>
+
+    <div class="row">
+      <div class="col-lg-4 mb-4">
+        <div class="card h-100 text-center">
+          <img class="card-img-top" src="{% static 'img/country/Germany/Germany_food1.jpg' %}" alt="">
+          <div class="card-body">
+            <h4 class="card-title">슈바인 학센</h4>
+            <p class="card-text">한국의 족발과 비슷한 음식으로 돼지 발 끝 부분을 삶아서 한 번 더 구워낸 음식</p>
+            <p>겉은 바삭하고 속은 촉촉하며 독일의 모든 축제에서도 빠지지 않고 등장하는 인기 메뉴이다.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 mb-4">
+        <div class="card h-100 text-center">
+          <img class="card-img-top"  src="{% static 'img/country/Germany/Germany_food2.jpg' %}" alt="">
+          <div class="card-body">
+            <h4 class="card-title">브레첼</h4>
+            <p class="card-text">하트 모양의 독일 전통 빵으로 겉은 바삭하고 속은 부드러운 맛</p>
+            <p>겉에 뿌려진 굵은 소금이 짭짤한 맛을 더해줘서 맥주 안주로도 좋다.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 mb-4">
+        <div class="card h-100 text-center">
+          <img class="card-img-top"  src="{% static 'img/country/Germany/Germany_food3.jpg' %}" alt="">
+          <div class="card-body">
+            <h4 class="card-title">맥주</h4>
+            <p class="card-text">맥주 소비량이 가장 많고 맥주의 역사가 가장 긴 나라이기 떄문에 독일에 가면 꼭 먹고 와야 할 음식 중 하나이다.</p>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+    <h2>명소</h2>
+
+    <div class="row">
+      <div class="col-lg-4 mb-4">
+        <div class="card h-100 text-center">
+          <img class="card-img-top" src="{% static 'img/country/Germany/Germany_sights1.jpg' %}" alt="">
+          <div class="card-body">
+            <h4 class="card-title">노인슈반슈타인 성</h4>
+            <p class="card-text">백설공주의 성, 백조의 성으로 잘 알려져있으며 세계에서 가장 멋진 성 중에 하나로 디즈니랜드에
+              영감을 준 모델이기도 하다.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 mb-4">
+        <div class="card h-100 text-center">
+          <img class="card-img-top"  src="{% static 'img/country/Germany/Germany_sights2.jpg' %}"  alt="">
+          <div class="card-body">
+            <h4 class="card-title">슈베린 성</h4>
+            <p class="card-text">유럽과 독일에서 가장 아름다운 역사적 건축물로 평가 받고 있으며 마치 호수 위에 떠 있는듯한 신비로운 모습이
+              인상적인 명소이다.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 mb-4">
+        <div class="card h-100 text-center">
+          <img class="card-img-top"  src="{% static 'img/country/Germany/Germany_sights3.jpg' %}"  alt="">
+          <div class="card-body">
+            <h4 class="card-title">하이델베르크</h4>
+            <p class="card-text">녹색 숲을 배경으로 고풍스러운 옛 성들의 모습이 아주 인상적인 곳.</p>
+            <p>죽기 전에 꼭 가봐야 할 세계 역사 유적으로도 꼽히는 하이델베르크는 해마다 수백만 명의 관광객이 찾아오는 독일의 유명 관광명소 중 하나이다.</p>
+        
+          </div>
+        </div>
+      </div>
+    </div>
+      <br>
+    <h2>알아두면 좋아요!</h2>
+
+    <div class="row">
+      <div class="col-lg-4 mb-4">
+        <div class="card h-100 text-center">
+          <img class="card-img-top" src="{% static 'img/country/meal.jpg' %}" alt="">
+          <div class="card-body">
+            <h4 class="card-title">식사 예절</h4>
+            <p class="card-text">1. 상대방의 술잔을 대신 채워주는 것은 자신을 아이나 모자란 사람 취급한다고 생각하고 불쾌하게 여긴다.<br><br>2. 소리 내지 않고 먹는다.<br><br>
+              3. 고기를 먹을 때 미리 잘라 놓지 않고 그때그떄 잘라서 먹는다.<br><br>
+              4. 양 팔은 테이블 위로 올려둔다.<br><br>
+              5. 자신의 접시에 있는 음식은 모두 먹도록 한다. </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 mb-4">
+        <div class="card h-100 text-center">
+          <img class="card-img-top" src="{% static 'img/country/climate.jpg' %}" alt="">
+          <div class="card-body">
+            <h4 class="card-title">기후</h4>
+            <p class="card-text">독일은 면적이 넓은만큼 기후도 지역에 따라 차이가 크다. 북부 지역은 난류가 흐르는 북대서양의 영향으로 비교적 온난한 날씨가 사계절 지속되고, 남부 지역은 알프스 산맥에 가깝다는 것에서 유추할 수 있듯이 겨울에는 꽤 춥고 여름에는 제법 덥다.<br><br>
+            연평균 기온은 9°(-10° ~ 30°) 정도이며 1월(평균 0°)이 가장 춥고, 여름에는 고온일 경우에도 습기가 적어 체감온도는 그렇게 높지 않음.</p> 
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 mb-4">
+        <div class="card h-100 text-center">
+          <img class="card-img-top" src="{% static 'img/country/Germany_language.png' %}" alt="">
+          <div class="card-body">
+            <h4 class="card-title">사용하는 언어</h4>
+            <p class="card-text">독일에서 가장 많이 사용되는 공식적인 언어는 독일어이다. 독일어는 유럽 연합에서 사용되는 23개의 공식적인 언어 중 하나이며, 유럽 위원회에서 사용되는 3개의 언어 중 하나이다.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+   
+    <!-- /.row -->
+ </div>
+    <br>
+  <!-- /.container -->
+
+  <!-- Footer -->
+  <footer class="py-5 bg-dark">
+    
+    <!-- /.container -->
+  </footer>
+   
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="{% static 'jquery.js' %}"></script>
+  <script src="{% static 'bootstrap.bundle.js' %}"></script>
+ {% endblock %}
+</body>
+
+</html>

@@ -47,8 +47,8 @@
           <div class="card-body">
             <form action="{% url 'free_comment_create' blog.id %}" method="POST">
                    {% csrf_token %}
-              <div class="form-group">
-                <textarea name="message" class="form-control" rows="3" ></textarea>
+              <div class="form-group">{{msg}}
+                <textarea name="message" class="form-control" rows="3"></textarea>
               </div>
               <button type="submit" class="btn btn-primary">댓글 달기</button>
             </form>

@@ -29,15 +29,17 @@
 
    
         <hr>
-         <a class="writer" style="font-weight:bold; font-size:20px;">작성자:</a> {{blog.author}}
+          <a class="writer" style="font-weight:bold; font-size:20px;"> {{blog.country}}</a>  in
+         <a class="writer" style="font-weight:bold; font-size:20px;"> {{blog.continent}}</a>
         <hr>
+          
         <p class="lead">내용: {{blog.content|linebreaksbr}}</p>
-      <p class="date">작성시간: {{ blog.created_at }}</p>
-                     대륙: {{blog.continent}}
-                      나라: {{blog.country}}
-                      해쉬태그: {{blog.hashtag}}
-                      출발일:{{blog.start_at}}
-                      도착일:{{blog.comeback_at}}
+      <p class="date">해쉬태그: {{blog.hashtag}}</p>
+                      출발일:{{blog.start_at}}<br>
+                      도착일:{{blog.comeback_at}}<br>
+                      작성시간: {{ blog.created_at }}<br>
+                      작성자: {{blog.author}}
+                      <br>
           {% if blog.author == request.user %}
           <a href="{% url 'company_update' blog.id %}" >수정</a> 
                      <a href="{% url 'company_delete' blog.id %}" style="color:red;">삭제</a>

@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+{% load staticfiles %}
+<html lang="en">
+
+<head>
+
+   {% block head %}
+
+  <title>Travel Ocean 아시아 - 싱가포르 </title>
+
+  {% endblock %}
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  {% block content %}
+
+  <!-- Page Content -->
+  <div class="container">
+
+    <!-- Page Heading/Breadcrumbs -->
+    <h1 class="mt-4 mb-3">싱가포르  
+      <small><span style="color:rgb(0, 0, 0)">Singapore</span>
+            
+            </small>
+    </h1>
+
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item">
+      <a href="{% url 'main' %}">Home</a>
+      </li>
+      <li class="breadcrumb-item active">Singapore</li>
+    </ol>
+
+    <!-- Intro Content -->
+    <div class="row">
+      <div class="col-lg-6">
+        <img class="img-fluid rounded mb-4" src="{% static 'img/country/Singapore/Singapore.jpg' %}" alt="">
+      </div>
+      <div class="col-lg-6">
+       <div style='line-height:200%'>
+        <p>싱가포르 공화국(Republic of Singapore) 줄여서 싱가포르(Singapore)는 동남아시아, 말레이 반도의 끝에 위치한 섬나라이자 항구 도시로 이루어진 도시 국가이다. 북쪽의 조호르 해협과 남쪽의 싱가포르 해협을 두고 각각 말레이시아, 인도네시아와 약간 분리되어 있다.
+
+        </p>
+        
+    </div>
+      </div>
+    </div>
+    <!-- /.row -->
+<br>
+    <!-- Team Members -->
+    <h2>꿀팁 & 주의할 점</h2>
+
+    <div class="row">
+      <div class="col-lg-4 mb-4">
+        <div class="card h-100 text-center">
+          <img class="card-img-top"  src="{% static 'img/country/Singapore/Singapore_1.jpg' %}" alt="">
+          <div class="card-body">
+            <p class="card-text">1. 싱가포르는 도로 교통법이 엄격하다. 택시를 탈 때 안전벨트 미착용시 본인은 $120, 운전자는 벌점을 받는다고 한다.
+              특히 택시 뒷 좌석에 타는 경우라도 예외는 아니니 항상 매는 것이 좋다.<br><br>
+              2. 싱가포르에서 무단횡단을 하다 적발되면 $1000의 벌금과 징역 3개월까지 받을 수 있다. 무슨 일이 있어도 무단횡단은 금지이다.
+              (추가 팁 : 횡단보도에 보행자 버튼이 있는데, 누르면 횡단보도가 파란불로 변한다.)<br><br>
+              3. 동성애가 밝혀지면 2년간 징역을 산다고 한다.</p>
+          
+         </div> 
+        </div>
+      </div>
+      <div class="col-lg-4 mb-4">
+        <div class="card h-100 text-center">
+          <img class="card-img-top" src="{% static 'img/country/Singapore/Singapore_2.jpg' %}" alt="">
+          <div class="card-body">
+            <p class="card-text">4. 권한이 없는 무료 와이파이를 함부로 사용하는 경우 벌금과 징역까지 선고받을 수 있다. 꼭 호텔이나 카페 등에서 제공하는 와이파이를 사용하자.<br><br>
+              5. 싱가폴에서는 껌을 판매하지 않으며 반입도 금지되어 있다. 껌을 씹을 시 $1000 가량의 벌금이 있다고 한다.<br>
+              싱가포르에 도착하기 전에 가방같은 곳에 껌이 없는지 꼭 확인하자.<br><br>
+              6. 대중교통 이용시 음식물 섭취할 경우 약 40만원의 벌금이 부과된다. 두리안을 들고 전철이나 대중교통을 이용해서도 안 된다.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 mb-4">
+        <div class="card h-100 text-center">
+          <img class="card-img-top"src="{% static 'img/country/Singapore/Singapore_3.jpg' %}" alt="">
+          <div class="card-body">
+            <p class="card-text">7. 심야 공공장소 음주시 약 83만원의 벌금이 부과되며, 2015년부터 공공장소에서 심야에 술을 마시면 안 된다.
+              저녁에 마트에서 술을 사는 것 조차 금지되어 있다고 한다.<br><br>
+              8. 퇴근, 심야시간에 50% 할증이 붙는다.(신용카드 사용시 10% 수수료) 싱가폴에는 UBER가 활성화되어 있어 택시를 이용하기에 간편하다.<br>
+              구글에 UBER SINGAPORE DISCOUNT CODE를 검색하면 많은 종류의 회사들이 할인코드를 내놓고 있다고 한다.<br><br>
+              9. 공공장소 등에서 악기를 연주하다 소음으로 신고를 당하면 많은 벌금을 맞는다.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /.row -->
+
+    <br>
+    <h2>대표 음식</h2>
+
+    <div class="row">
+      <div class="col-lg-4 mb-4">
+        <div class="card h-100 text-center">
+          <img class="card-img-top" src="{% static 'img/country/Singapore/Singapore_food1.jpg' %}" alt="">
+          <div class="card-body">
+            <h4 class="card-title">락사</h4>
+            <p class="card-text">싱가포르에 와서 락사 한 그릇 먹지 않았다면, 제대로 된 식사를 했다고 말 할 수 없을 정도로 유명한 음식이다.<br><br>이는 펠라나칸(해협 중국인 요리) 요리로, 싱가포르 요리의 큰 축을 담당하고 있다.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 mb-4">
+        <div class="card h-100 text-center">
+          <img class="card-img-top"src="{% static 'img/country/Singapore/Singapore_food2.jpg' %}" alt="">
+          <div class="card-body">
+            <h4 class="card-title">칠리 크랩</h4>
+            <p class="card-text">싱가포르 국민 모두가 엄지를 세워들며 추천하는 음식으로, 바다를 끼고 있는 도시답게 싱가포르에서는 어떤 레스토랑을 찾게 되든, 신선한 해산물을 쉽게 맛 볼 수 있다.<br><br>특히 싱싱한 게를 매콤하게 요리해내는 칠리크랩은 싱가포르의 별미로 이미 정평이 나있다. </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 mb-4">
+        <div class="card h-100 text-center">
+          <img class="card-img-top" src="{% static 'img/country/Singapore/Singapore_food3.jpg' %}" alt="">
+          <div class="card-body">
+            <h4 class="card-title">피시볼</h4>
+            <p class="card-text">곤약과 어묵의 맛이 반반 정도 섞인 듯한 피시볼은 한국의 어묵요리처럼 싱가포르에서 꽤 대중적인 음식이다. 생선 살을 갈아서 동그랗게 뭉친 뒤 끓는 물에 한번 데친 다음, 손님이 오면 그때 그때 뜨거운 국물과 함께 담아낸다.</p>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+    <h2>명소</h2>
+
+    <div class="row">
+      <div class="col-lg-4 mb-4">
+        <div class="card h-100 text-center">
+          <img class="card-img-top" src="{% static 'img/country/Singapore/Singapore_sights1.jpg' %}" alt="">
+          <div class="card-body">
+            <h4 class="card-title">가든스 바이 더 베이</h4>
+            <p class="card-text">싱가포르를 대표하는 공원인 가든스 바이 더 베이는 마리나베이에 위치해 있으며 총 8개의 테마로 구성되어 있고 멋진 야경을 자랑한다.<br><br>
+              정원의 도시라는 계획 하에 만들어진 거대한 열대 정원이고 열대식물을 키우기 위해 인공 환경을 조성해서 꾸며 놓은 곳이다. </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 mb-4">
+        <div class="card h-100 text-center">
+          <img class="card-img-top" src="{% static 'img/country/Singapore/Singapore_sights2.jpg' %}" alt="">
+          <div class="card-body">
+            <h4 class="card-title">마리나 베이 샌즈</h4>
+            <p class="card-text">마리나베이는 싱가포르 남쪽 센트럴 에어리어에 있는 지역이다.<br>싱가포르의 랜드마크이며 최고의 멀티 플레이스로 화려한 레이저 쇼도 볼 수 있다.<br><br>
+              모든 관광객들이 싱가포르에 왔다는 기념 사진을 찍을 때 반드시 등장하는 곳으로, 통칭해서 MBS라고도 불린다. 
+              1박에 40만원을 호가하는 높은 가격임에도 불구하고 그 명성과 옥상 수영장으로 인해 언제나 예약 매진이라고 한다. 
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 mb-4">
+        <div class="card h-100 text-center">
+          <img class="card-img-top" src="{% static 'img/country/Singapore/Singapore_sights3.png' %}" alt="">
+          <div class="card-body">
+            <h4 class="card-title">머라이언</h4>
+            <p class="card-text">머라이언은 싱가포르의 상징물로서 상반신은 사자, 하반신은 물고기의 모습을 한 가공의 동물이다.<br><br>입구에는 머라이언 상이 싱가포르의 마스코트가 되기까지의 과정을 애니메이션으로 전시해 놓았고 
+              그 앞쪽으로는 가우디 양식으로 꾸며진 120m의 산책로가 조성되어 있다.<br><br>
+              머라이언 상은 전망대로도 쓰이는데, 머리 부분에서 감상하는 센토사 섬의 남부 지역 전망이 끝내준다. 
+              전망대에서는 주위 경관을 360도로 모두 감상할 수 있기에 그 감동이 배가 된다. 
+              
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+<br>
+    <h2>알아두면 좋아요!</h2>
+
+    <div class="row">
+      <div class="col-lg-4 mb-4">
+        <div class="card h-100 text-center">
+          <img class="card-img-top" src="{% static 'img/country/meal.jpg' %}" alt="">
+          <div class="card-body">
+            <h4 class="card-title">식사 예절</h4>
+            <p class="card-text">1. 손으로 음식물을 집어 먹는 것은 피하는 것이 좋다.<br><br>
+              2. 왼손으로식사를 하거나 사람을 접촉해서는 안 된다.<br><br>
+              3. 식사 초대를 받았을 때 음식이나 요리를 선물하면 대접이 소홀한 것으로 인식하여 모욕감을 느낀다.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 mb-4">
+        <div class="card h-100 text-center">
+          <img class="card-img-top"src="{% static 'img/country/climate.jpg' %}" alt="">
+          <div class="card-body">
+            <h4 class="card-title">기후</h4>
+            <p class="card-text">연평균 24도에서 32도 사이를 넘나드는 열대기후로 일년 내내 더운 날씨를 유지한다. 
+              한국의 여름보다 덥고, 습한 싱가포르의 날씨는 우기와 건기로 나뉘는데 우리나라의 겨울에 해당하는 11월부터 1월까지는 우기.<br><br>
+              열대성 소나기 스콜의 영향을 받아 자주 소나기가 내리니 우산이나 우비를 준비하자. 
+              6월부터 8월까지는 여름으로, 매우 덥고 습하므로 여행 시 더위를 조심해야 한다.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 mb-4">
+        <div class="card h-100 text-center">
+          <img class="card-img-top"src="{% static 'img/country/Singapore_language.png' %}" alt="">
+          <div class="card-body">
+            <h4 class="card-title">사용하는 언어</h4>
+            <p class="card-text">공용어로 말레이어, 영어, 중국어, 타밀어가 있으나, 사실상 영어가 유일한 공용어 역할을 한다. 말레이시아와 긴 역사 때문에 말레이어는 국민어로 지정되어있다.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- /.container -->
+<br>
+  <!-- Footer -->
+  <footer class="py-5 bg-dark">
+
+  </footer>
+    
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="{% static 'jquery.js' %}"></script>
+  <script src="{% static 'bootstrap.bundle.js' %}"></script>
+ {% endblock %}
+</body>
+
+</html>

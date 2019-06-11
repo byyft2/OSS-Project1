@@ -74,8 +74,9 @@
       <div class="login-form">
     <form action="{% url 'main' %}" method="POST">
                     {% csrf_token %}
+                    
         <h2 class="text-center">로그인</h2>       
-        <div class="form-group">
+        <div class="form-group">{{msg}}
             <input type="text" class="form-control" placeholder="UserId" required="required" name="userid">
         </div>
         <div class="form-group">
@@ -97,78 +98,75 @@
       {% else %}
       
       <h5> {{ user.get_username }}님 반갑습니다.</h5>
-      <form action="{% url 'updateuser' %}" method="POST" enctype="multipart/form-data">
-          {% csrf_token %}
-                  <input type="submit" value="정보수정하기"> 
-    </form>
+
 <br>
          {% endif %}
     <!-- /.row -->
    <!-- Marketing Icons Section -->
    <div class="row">
       <div class="col-lg-4 col-sm-6 portfolio-item">
-        <div class="card h-100">
-          <a href="https://www.ybtour.co.kr/product/main.yb?menu=PKG&dspSid=AA00000"><img class="card-img-top" src="../static/img/main_card.png" alt=""></a>
+        <div id="japan_kyusu"  class="card h-100" >
+          <a href="http://www.hanatour.com/asp/booking/oversea/oversea-main.asp?hanacode=am_os_pack"><img class="card-img-top" src="../static/img/kyusu.jpg" alt=""></a>
           <div class="card-body">
             <h4 class="card-title">
-              <a href="https://www.ybtour.co.kr/product/main.yb?menu=PKG&dspSid=AA00000">노랑 풍선</a>
-            </h4>
-            <p class="card-text">노랑 풍선 해외여행 패키지</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-4 col-sm-6 portfolio-item">
-        <div class="card h-100">
-          <a href="http://www.naeiltour.co.kr/main/index.asp?gclid=EAIaIQobChMIn6CT9f614gIVRmoqCh0JhgmGEAAYAiAAEgIRgfD_BwE"><img class="card-img-top" src="../static/img/main_card2.jpg" alt=""></a>
-          <div class="card-body">
-            <h4 class="card-title">
-              <a href="http://www.naeiltour.co.kr/main/index.asp?gclid=EAIaIQobChMIn6CT9f614gIVRmoqCh0JhgmGEAAYAiAAEgIRgfD_BwE">내일 투어</a>
-            </h4>
-            <p class="card-text">내일 투어 해외여행 패키지</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-4 col-sm-6 portfolio-item">
-        <div class="card h-100">
-          <a href="http://www.lottetour.com/main/package?mac_ad_key=1879520402&gclid=EAIaIQobChMIn6CT9f614gIVRmoqCh0JhgmGEAAYAyAAEgLLrfD_BwE"><img class="card-img-top" src="../static/img/main_card3.png" alt=""></a>
-          <div class="card-body">
-            <h4 class="card-title">
-              <a href="http://www.lottetour.com/main/package?mac_ad_key=1879520402&gclid=EAIaIQobChMIn6CT9f614gIVRmoqCh0JhgmGEAAYAyAAEgLLrfD_BwE">롯데 관광</a>
-            </h4>
-            <p class="card-text">롯데 관광 해외여행 패키지</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-4 col-sm-6 portfolio-item">
-        <div class="card h-100">
-          <a href="http://www.hanatour.com/asp/booking/oversea/oversea-main.asp?hanacode=am_os_pack"><img class="card-img-top" src="../static/img/main_card4.jpg" alt=""></a>
-          <div class="card-body">
-            <h4 class="card-title">
-              <a href="http://www.hanatour.com/asp/booking/oversea/oversea-main.asp?hanacode=am_os_pack">하나 투어</a>
+              <a href="http://www.hanatour.com/asp/booking/oversea/oversea-main.asp?hanacode=am_os_pack">일본 규슈 3박4일</a>
             </h4>
             <p class="card-text">하나 투어 해외여행 패키지</p>
           </div>
         </div>
       </div>
       <div class="col-lg-4 col-sm-6 portfolio-item">
-        <div class="card h-100">
-          <a href="http://tour.interpark.com/package"><img class="card-img-top" src="../static/img/main_card5.jpg" alt=""></a>
+        <div id="japan_kagosima"class="card h-100" >
+          <a href="http://tour.interpark.com/package"><img class="card-img-top" src="../static/img/gagosima.jpg" alt=""></a>
           <div class="card-body">
             <h4 class="card-title">
-              <a href="http://tour.interpark.com/package">인터파크 투어</a>
+              <a href="http://tour.interpark.com/package">가고시마현 4박5일</a>
             </h4>
             <p class="card-text">인터파크 투어 해외여행 패키지</p>
           </div>
         </div>
       </div>
       <div class="col-lg-4 col-sm-6 portfolio-item">
-        <div class="card h-100">
-          <a href="https://mm.ttang.com/product/pkg/index.do"><img class="card-img-top"src="../static/img/main_card6.png" alt=""></a>
+        <div id="japan_osaka" class="card h-100">
+          <a href="https://mm.ttang.com/product/pkg/index.do"><img class="card-img-top"src="../static/img/oska.jpg" alt=""></a>
           <div class="card-body">
             <h4 class="card-title">
-              <a href="https://mm.ttang.com/product/pkg/index.do">땡처리 닷컴</a>
+              <a href="https://mm.ttang.com/product/pkg/index.do">오사카 6박7일</a>
             </h4>
             <p class="card-text">땡처리 닷컴 해외여행 패키지</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-sm-6 portfolio-item">
+        <div id="china_makao" class="card h-100">
+          <a href="http://www.naeiltour.co.kr/main/index.asp?gclid=EAIaIQobChMIn6CT9f614gIVRmoqCh0JhgmGEAAYAiAAEgIRgfD_BwE"><img class="card-img-top" src="../static/img/makao.jpg" alt=""></a>
+          <div class="card-body">
+            <h4 class="card-title">
+              <a href="http://www.naeiltour.co.kr/main/index.asp?gclid=EAIaIQobChMIn6CT9f614gIVRmoqCh0JhgmGEAAYAiAAEgIRgfD_BwE">마카오 2박3일</a>
+            </h4>
+            <p class="card-text">내일 투어 해외여행 패키지</p>
+          </div>
+        </div>
+      </div>
+    <div  class="col-lg-4 col-sm-6 portfolio-item">
+        <div id="jjury" class="card h-100">
+          <a href="http://www.naeiltour.co.kr/main/index.asp?gclid=EAIaIQobChMIn6CT9f614gIVRmoqCh0JhgmGEAAYAiAAEgIRgfD_BwE"><img class="card-img-top" src="../static/img/namgk.jpg" alt=""></a>
+          <div class="card-body">
+            <h4 class="card-title">
+              <a href="http://www.naeiltour.co.kr/main/index.asp?gclid=EAIaIQobChMIn6CT9f614gIVRmoqCh0JhgmGEAAYAiAAEgIRgfD_BwE">남극 혹한기 4박5일</a>
+            </h4>
+            <p class="card-text">내일 투어 해외여행 패키지</p>
+          </div>
+        </div>
+      </div>
+    <div  class="col-lg-4 col-sm-6 portfolio-item">
+        <div id="jjury1" class="card h-100">
+          <a href="http://www.naeiltour.co.kr/main/index.asp?gclid=EAIaIQobChMIn6CT9f614gIVRmoqCh0JhgmGEAAYAiAAEgIRgfD_BwE"><img class="card-img-top" src="../static/img/oceania.jpg" alt=""></a>
+          <div class="card-body">
+            <h4 class="card-title">
+              <a href="http://www.naeiltour.co.kr/main/index.asp?gclid=EAIaIQobChMIn6CT9f614gIVRmoqCh0JhgmGEAAYAiAAEgIRgfD_BwE">오세아니아 전국 30박31일</a>
+            </h4>
+            <p class="card-text">내일 투어 해외여행 패키지</p>
           </div>
         </div>
       </div>

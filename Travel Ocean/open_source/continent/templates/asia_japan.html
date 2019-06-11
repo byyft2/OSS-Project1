@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+{% load staticfiles %}
+<html lang="en">
+
+<head>
+
+   {% block head %}
+
+  <title>Travel Ocean 아시아 - 일본 </title>
+
+  {% endblock %}
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  {% block content %}
+
+  <!-- Page Content -->
+  <div class="container">
+
+    <!-- Page Heading/Breadcrumbs -->
+    <h1 class="mt-4 mb-3">일본 
+      <small><span style="color:rgb(0, 0, 0)">Japan</span>
+            
+            </small>
+    </h1>
+
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item">
+      <a href="{% url 'main' %}">Home</a>
+      </li>
+      <li class="breadcrumb-item active">Japan</li>
+    </ol>
+
+    <!-- Intro Content -->
+    <div class="row">
+      <div class="col-lg-6">
+        <img class="img-fluid rounded mb-4" src="{% static 'img/country/Japan/Japan.jpg'  %}" alt="">
+      </div>
+      <div class="col-lg-6">
+        <div style='line-height:200%'>
+        <p>일본국, 약칭 일본은 동아시아에 있는 국가다. 국토는 태평양에 있는 일본 열도의 네 개의 섬으로 이루어진 홋카이도, 혼슈, 시코쿠, 규슈를 중심으로 주변에 산재한 작은 섬으로 구성되어 있다. 
+
+        </p>
+        
+    </div>
+      </div>
+    </div>
+    <!-- /.row -->
+<br>
+    <!-- Team Members -->
+    <h2>꿀팁 & 주의할 점</h2>
+
+    <div class="row">
+      <div class="col-lg-4 mb-4">
+        <div class="card h-100 text-center">
+          <img class="card-img-top"  src="{% static 'img/country/Japan/Japan_1.jpg'  %}"  alt="">
+          <div class="card-body">
+            <p class="card-text">1. 일본은 기본 전압으로 110V를 사용하기 때문에 변환 아답터를 가져가야 한다.<br><br>
+              2. 우리나라는 기본적으로 우측통행이지만 일본은 자동차나 에스컬레이터 등 걷는 기준들이 모두 좌측통행이기 때문에 주의해야 한다.<br><br>
+              3. 일본은 자전거 등록제라고 해서 자전거를 나라에 등록해놓는 경우가 대부분이다. 혹시 길가에 버려진듯한 자전거가 세워져있다고 해도
+              만지거나 타면 절대 안 된다.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 mb-4">
+        <div class="card h-100 text-center">
+          <img class="card-img-top"  src="{% static 'img/country/Japan/Japan_2.jpg'  %}"  alt="">
+          <div class="card-body">
+            <p class="card-text">4. 일본은 약 값이 10배 정도 고가이므로 한국에서 비상약을 구매해가는 것이 좋다.<br><br>
+              5. 일본은 대중교통이나 택시가 한국보다 많이 비싸기 때문에 가급적 걸어다니거나 패스를 구매하는 것이 좋다.<br><br>
+              6. 일본은 카드를 사용하지 않는 가게가 다수이므로 현금을 많이 준비해가는 것이 좋다.<br><br>
+              </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 mb-4">
+        <div class="card h-100 text-center">
+                    <img class="card-img-top"  src="{% static 'img/country/Japan/Japan_3.jpg'  %}"  alt="">
+          <div class="card-body">
+            <p class="card-text">7. 일본 식당은 점원이 자리를 안내하므로 우리나라처럼 앉고 싶은 자리에 앉아버리면 점원이 당황할 수 있다.<br><br>
+              8. 일본은 정수기를 사용하지 않는다. 식수는 수돗물이며 식당도 마찬가지이다. 마트에서 생수 구매하는 것을 추천한다.<br><br>
+              9. 일본에는 소비세가 존재한다. 소비세가 가격에 포함되어 있을 수도 있고 아닐 수도 있으니 빌지에 있는 가격에 딱 맞게 주는 것 보다 높게 주는 것이 좋다.
+              </p>
+         </div> 
+        </div>
+      </div>
+    </div>
+    <!-- /.row -->
+<br>
+    
+    <h2>대표 음식</h2>
+
+    <div class="row">
+      <div class="col-lg-4 mb-4">
+        <div class="card h-100 text-center">
+                    <img class="card-img-top"  src="{% static 'img/country/Japan/Japan_food1.jpg'  %}"  alt="">
+          <div class="card-body">
+            <h4 class="card-title">라멘</h4>
+            <p class="card-text">라멘(ラーメン)은 면과 국물로 이뤄진 일본의 대중 음식이다. 납면을 이용한 중국의 국수 요리인 라몐을 기원으로 한 면요리로서 면과 국물, 그 위에 돼지고기(챠슈), 파, 삶은 달걀 등의 여러 토핑을 얹는다.
+              일본에서는 국민 음식이라 할 만큼 인기가 있으며, 일본 외에도 지명도가 높은 일식이다. 일본에서는 중국 요리로 분류하기도 한다.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 mb-4">
+        <div class="card h-100 text-center">
+                    <img class="card-img-top"  src="{% static 'img/country/Japan/Japan_food2.jpg'  %}"  alt="">
+          <div class="card-body">
+            <h4 class="card-title">스시</h4>
+            <p class="card-text">식초등으로 간을 한 밥을 작게 주물러 한입 크기로 썬 신선한 어패류(참치, 새우, 오징어 등)나 달게 맛을 들여 두껍게 말은 계란말이 등을 얹어서 만든 것을 니기리스시(握りすし)라고 한다. 또한 오이나 절인 야채등을 중심부에 놓고 말아 만든 김밥을 마키즈시(眷きずし)라고 한다.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 mb-4">
+        <div class="card h-100 text-center">
+                    <img class="card-img-top"  src="{% static 'img/country/Japan/Japan_food3.jpg'  %}"  alt="">
+          <div class="card-body">
+            <h4 class="card-title">타코야끼</h4>
+            <p class="card-text">타코야끼는 밀가루 반죽 안에 잘게 자른 문어와 파 등을 넣고 전용 틀에서 한입 크기의
+              공 모양으로 구워 타코야끼 전용 소스와 마요네즈를 바르고 가츠오부시, 김가루 등을 뿌려먹는 음식이다.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+    <h2>명소</h2>
+
+    <div class="row">
+      <div class="col-lg-4 mb-4">
+        <div class="card h-100 text-center">
+                    <img class="card-img-top"  src="{% static 'img/country/Japan/Japan_sights1.jpg'  %}"  alt="">
+          <div class="card-body">
+            <h4 class="card-title">도쿄 스카이 트리</h4>
+            <p class="card-text">도쿄 스카이 트리는 일본 도쿄도 스미다 구에 세워진 전파탑이다. 본래 높이 610.58m로 계획되었으나 2009년 10월에 높이 634 m로 설계가 변경되어, 캐나다의 CN 타워와 중국의 광저우타워를 제치고 세계에서 가장 높은 자립식 전파탑이 되었다.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 mb-4">
+        <div class="card h-100 text-center">
+                    <img class="card-img-top"  src="{% static 'img/country/Japan/Japan_sights2.jpg'  %}"  alt="">
+          <div class="card-body">
+            <h4 class="card-title">오사카 성</h4>
+            <p class="card-text">오사카 성은 일본의 나고야성, 구마모토성과 함께 일본의 3대 성으로 꼽히며 오사카의 상징으로 널리 알려져있다.
+              오사카 성의 중심에 자리잡고 있는 텐슈카쿠는 5층으로 이루어져 있는데, 가장 위층에 위치한 전망대에서는 오사카 시내를 한눈에 볼 수 있고 내부는
+              오사카 성의 발자취를 볼 수 있는 풍부한 자료들이 전시되어 있는 박물관으로 되어있다.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 mb-4">
+        <div class="card h-100 text-center">
+                    <img class="card-img-top"  src="{% static 'img/country/Japan/Japan_sights3.jpg'  %}"  alt="">
+          <div class="card-body">
+            <h4 class="card-title">후시미 이나리 신사</h4>
+            <p class="card-text">후시미 이나리 신사는 일본 교토부에 있는 신사이다. 매년 1월 1일이 되면 많은 사람들이 모인다. 영화 '게이샤의 추억'의 촬영지로 유명하다. 일본전역에 3만개 정도 있는 이나리신사의 본점으로, 이나리신을 섬기고 있다.
+            </p>
+           
+          </div>
+        </div>
+      </div>
+    </div>
+<br>
+    <h2>알아두면 좋아요!</h2>
+
+    <div class="row">
+      <div class="col-lg-4 mb-4">
+        <div class="card h-100 text-center">
+          <img class="card-img-top" src="{% static 'img/country/meal.jpg' %}" alt="">
+          <div class="card-body">
+            <h4 class="card-title">식사 예절</h4>
+            <p class="card-text">1. 일본에서는 밥그릇이나 국그릇을 들고 먹는 것이 올바른 매너이다. 또한 팔꿈치를 테이블에 대고 먹는 것은 일본에서는 예의가 없다고 여겨지므로 최대한 자제해야 한다.<br><br>
+                2. 식기를 아무렇게나 소리 나게 다루는 것은 예절에 어긋난다. 젓가락으로 식기를 두드리거나, 소리를 내며 식기를 놓는 것은 좋지 않다.<br><br>
+            3. 음식에 대한 감사의 의미로 식전과 식후에 인사를 하는 것이 습관이다. 음식에는 생명이 깃들어 있어, 그 생명을 받는다는 뜻으로 '이타다키마스'. 다 먹은 후에는 감사의 의미를 담아 '고치소사마'라고 말하는 것이 기본 매너이다.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 mb-4">
+        <div class="card h-100 text-center">
+          <img class="card-img-top"src="{% static 'img/country/climate.jpg' %}" alt="">
+          <div class="card-body">
+            <h4 class="card-title">기후</h4>
+            <p class="card-text">난세이 제도를 포함한 일본 열도는 남북으로 5000km에 이르며 냉대 기후에서 열대 기후까지 걸쳐있는 데다가 복잡한 지형과 해류의 영향이 크기 때문에 지역별 기후 차이가 현저하다.
+              대부분의 지역은 온난한 기후이며 사계절 구분이 뚜렷하다. 태평양 연안 지대는 여름에는 매우 무덥고 겨울에는 건조하고 맑은 날이 많아진다.
+              동해 쪽에는 강설이 많아 니가타 현을 포함한 호쿠리쿠 지방은 세계적인 다설 지대로 손꼽힌다. 홋카이도를 제외한 지역에는 6월초 ~ 7월 중순에 걸쳐 고온다습한 장마가 내리며
+              8월 ~10월에 걸쳐 일본 열도 남서부 지역은 태풍의 영향을 심하게 받는다.</div>
+        </div>
+      </div>
+      <div class="col-lg-4 mb-4">
+        <div class="card h-100 text-center">
+          <img class="card-img-top"src="{% static 'img/country/Japan_language.png' %}" alt="">
+          <div class="card-body">
+            <h4 class="card-title">사용하는 언어</h4>
+            <p class="card-text">일본 전체 인구의 99% 이상이 일본어를 제1국어로서 사용하고 있다. 대표적인 일본어 사전인 신센고쿠고지텐에 따르면 한자·한문·중국어를 뿌리로 하는 단어가 전체 어휘의 49.1%, 일본어 토박이말이 33.8%, 영어를 비롯한 기타 외국어에서 유래된 외래어가 8.8% 이다.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    </div>
+  <!-- Footer -->
+    <br>
+  <footer class="py-5 bg-dark">
+    
+    <!-- /.container -->
+  </footer>
+    
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="{% static 'jquery.js' %}"></script>
+  <script src="{% static 'bootstrap.bundle.js' %}"></script>
+ {% endblock %}
+</body>
+
+</html>

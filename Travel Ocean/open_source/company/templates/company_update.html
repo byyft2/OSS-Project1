@@ -4,7 +4,50 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    {% block head %}<title>Travel Ocean 동행게시판</title>{% endblock %}
+    {% block head %}<title>Travel Ocean 동행게시판</title>
+    <style>
+        input.relative{
+             position: relative;
+             left: 845px;
+             bottom: 320px;
+         }
+        input.relative1{
+             position: relative;
+             left: 45px;
+             bottom: 50px;
+         }
+    select.relative{
+             position: relative;
+             left: 217px;
+             bottom: 216px;
+         }
+         select.relative1{
+             position: relative;
+             left: 217px;
+             bottom: 216px;
+         }
+         select.relative2{
+             position: relative;
+             left: 216px;
+             bottom: 216px;
+         }
+         select.relative3{
+             position: relative;
+             left: 217px;
+             bottom: 216px;
+         }
+         select.relative4{
+             position: relative;
+             left: 216px;
+             bottom: 216px;
+         }
+         select.relative5{
+             position: relative;
+             left: 216px;
+             bottom: 216px;
+         }
+    </style>
+    {% endblock %}
     </head>
 <body>
     {% block content %}
@@ -17,7 +60,7 @@
         <input type="button" style="width:100px;height:30px;" onclick="africa(); africagogo()" value="아프리카">  <input style="width:100px;height:30px;" type="button" onclick="europe(); youlovegogo()" value="유럽">  <input type="button" style="width:100px;height:30px;" onclick="america(); americanogogo()" value="아메리카">  <input style="width:100px;height:30px;" type="button" onclick="oceania(); oceangogo()" value="오세아니아">  <input style="width:100px;height:30px;" type="button" onclick="namgk(); mangkgogo()" value="남극"><br><br><br>
     나라 : <input type="text" id="country1" name="country" readonly value="{{ blog.country }}"><br><br>
     컨셉 : <input type="text" name="concept" value="{{ blog.hashtag }}"><br><br>
-    출발 : <input type="date" name="startday" value="{{ blog.start_at }}"><br><br>
+    출발 : <input type="date" name="startday" value="{{ blog.start_at }}"> 도착일을 출발일보다 빠르게 설정시 저장을 거부합니다.<br><br>
     복귀 : <input type="date" name="comebackday" value="{{ blog.comeback_at }}"><br><br>
         <select id="aseea" class="relative" style="width:100px;height:30px;"  disabled = True>
   <option>대한민국</option>
@@ -97,7 +140,9 @@
         
 <br><br>
     
-     <input type="submit" name="btn1" value="값넣기";>
+     <input class ="relative1" style="width:165px;height:50px;" type="submit" name="btn1" value="저장하기";>
+                              <input class ="relative1" type="button" style="width:165px;height:50px;"  value="뒤로가기" onclick="history.back(-1);">
+
 </form>
     <input type="button"  onclick="choice()" value="나라 선택" class="relative">
      <script language="javascript">
@@ -249,7 +294,6 @@
             }
         }
     </script>
-    <input type="button" onclick="yeah()">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script src="{% static 'jquery.js' %}"></script>
   <script src="{% static 'bootstrap.bundle.js' %}"></script>

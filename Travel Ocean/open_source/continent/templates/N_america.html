@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+{% load staticfiles %}
+<html lang="en">
+
+<head>
+ {% block head %}
+
+  <title>Travel Ocean 대륙페이지 - 북아메리카 </title>
+
+  {% endblock %}
+</head>
+
+<body>
+
+   {% block content %}
+
+  <!-- Page Content -->
+  <div class="container">
+
+    <!-- main > portfolio > column1 -->
+    <!-- Page Heading/Breadcrumbs -->
+    <h2 class="mt-4 mb-3"><small>대륙선택</small>  <!-- Portfolio 1-->>
+      <b>북아메리카 </b>
+    </h2>
+
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item">
+        <a href="{% url 'main' %}">Home</a>
+      </li>
+      <li class="breadcrumb-item active">북아메리카</li>
+    </ol>
+
+    <!-- Project One -->
+    <div class="row">
+      <div class="col-md-7">
+        <a href="{% url 'N_america_usa' %}">
+          <img  src="{% static 'img/country/USA/USA.jpg'  %}" alt="dan" width="100%" height="100%">
+        </a>
+      </div>
+      <div class="col-md-5">
+        <h3><b>미국 </b></h3>
+        <p>미합중국(USA - United States of America), 약칭 합중국(US - United States) 또는 미국은 주 50개와 특별구 1개로 이루어진 연방제 공화국이다.
+태평양의 하와이주를 제외한 모든 주와 수도인 워싱턴 D.C.는 북아메리카에 있으며, 북측으로는 캐나다와 남측으로는 멕시코와 국경을 맞댄다. </p>
+        <a class="btn btn-primary"  href="{% url 'N_america_usa' %}" onclick="location.href='danmark.html'">자세히 보기
+          <span class="glyphicon glyphicon-chevron-right"></span>
+        </a>
+      </div>
+    </div>
+    <!-- /.row -->
+
+    <hr>
+
+    <!-- Project Two -->
+    <div class="row">
+      <div class="col-md-7">
+        <a href="{% url 'N_america_canada' %}">
+          <img src="{% static 'img/country/Canada/Canada.png'  %}" alt="dan" width="100%" height="100%">
+        </a>
+      </div>
+      <div class="col-md-5">
+        <h3><b>캐나다  
+            </b></h3>
+        <p>북아메리카에 위치한 국가. 총 10개의 주와 3개의 준주로 이루어진 연방국가로 북극과 가장 가까운 나라 중 하나이며 나라의 상징은 설탕단풍나무(Sugar Maple. 팬케이크의 양념인 메이플 시럽의 원료)와 비버다. </p>
+        <a class="btn btn-primary"  href="{% url 'N_america_canada' %}">자세히 보기
+          <span class="glyphicon glyphicon-chevron-right"></span>
+        </a>
+      </div>
+    </div>
+    <!-- /.row -->
+
+    <hr>
+
+    <!-- Project Three -->
+    
+  </div>
+  <!-- /.container -->
+
+  <!-- Footer -->
+  <footer class="py-5 bg-dark">
+    <div class="container">
+      <p class="m-0 text-center text-white"> </p>
+    </div>
+    <!-- /.container -->
+  </footer>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="{% static 'jquery.js' %}"></script>
+  <script src="{% static 'bootstrap.bundle.js' %}"></script>
+ {% endblock %}
+</body>
+
+</html>

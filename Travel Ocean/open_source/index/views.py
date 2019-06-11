@@ -20,7 +20,7 @@ def main(request):
         password = request.POST["pw"]
         user = auth.authenticate(request, username=username, password=password)
         if user is None:
-            return render(request, "main.html")
+            return render(request, "main.html",{"msg":"일치하는 회원정보가 없습니다."})
         auth.login(request, user)
     return redirect("main")
 
@@ -38,18 +38,24 @@ def signup(request):
         phone = request.POST["phone"]
         birth = request.POST["birth"]
         email = request.POST["email"]
+        pwlen = len(password)
+        birth1 = birth[0:4]
+        birthcheck = int(birth1)
         if User.objects.filter(username=username).exists():
             return render(request, "signup.html",{"msg":"이미 존재하는 ID입니다."})
         if is_blank(username, password, password_check, name, phone, birth, email):
             return render(request, "signup.html",{"msg":"공백 입니다."})
         if password != password_check:
             return render(request, "signup.html",{"pw_msg":"비빌번호가 일치하지않습니다."})
+        if password == password_check and pwlen <8:
+            return render(request, "signup.html",{"pw_msg":"비빌번호는 8자 이상으로 해야합니다."})
+        if birthcheck > 2019 or birthcheck < 1920:
+            return render(request, "signup.html",{"pw_msg":"음 연도가 잘못된것 같은데요?"})
         user = User.objects.create_user(
             username=username, password=password, name=name,
             phone=phone, birth=birth, email=email)
         auth.login(request, user)
     return redirect("main")
-
 
 def signout(request):
     if request.method == "POST":
@@ -63,6 +69,11 @@ def id_find(request):
         email = request.POST["email"]
         if is_id_blank(name, email):
             return render(request, "id_find.html",{"msg":"공백 입니다."})
+        realname = User.objects.filter(name=name , email = email)
+        #realemail = User.objects.filter(email=email)
+        namelength = len(realname)
+        if namelength == 0:
+            return render(request, "id_find.html",{"msg":"해당하는 정보가 없습니다."})
         users = User.objects.filter(name=name) and User.objects.filter(email=email)
         return render(request, "id_find.html",{"users":users})
     return render(request, "id_find.html")
@@ -101,10 +112,15 @@ def testgogogo(request):
         phone = request.POST["phone"]
         birth = request.POST["birth"]
         email = request.POST["email"]
-        pw = request.POST["pw1"]
+        password = request.POST["pw1"]
+        password_check = request.POST["pw2"]
+        if is_blank(username, password, password_check, name, phone, birth, email):
+            return render(request, "change_user_test.html",{"msg":"공백 입니다."})
+        if password != password_check:
+            return render(request, "change_user_test.html",{"pw_msg":"비빌번호가 일치하지않습니다."})
         queryset = User.objects.filter(username__exact=username)
         queryset.delete()
-        sibal = User.objects.create_user(username = username, name = name, phone = phone, birth = birth, email = email, password = pw )
+        sibal = User.objects.create_user(username = username, name = name, phone = phone, birth = birth, email = email, password = password )
         auth.login(request, sibal)
     return render(request, "main.html")
 
@@ -144,14 +160,15 @@ def free_borad_detail(request, id):
     posts = Comment.objects.filter(post=blog.id)
     return render(request, "free_borad_detail.html", {"blog":blog, "posts":posts})
 
-
 @login_required
 def free_borad_delete(request,id):
     blog = get_object_or_404(Blog, pk=id)
     if blog.author != request.user:
         return redirect("main")
-    blog.delete()
-    return redirect("free_borad")
+    if request.method == 'POST':
+        blog.delete()
+        return redirect("free_borad")
+    return render(request, "free_borad_delete.html", {"blog": blog})
 
 @login_required
 def free_borad_update(request,id):
@@ -171,14 +188,18 @@ def free_borad_update(request,id):
 
 @login_required
 def free_comment_create(request, id):
-    post=get_object_or_404(Blog,pk=id)
     if request.method=='POST':
-        Comment.objects.create(
-            post=post,
-            message=request.POST['message'],
-            author=request.user
-        )
-        return redirect("free_borad_detail",id)
+        comment = Comment()
+        comment.message = request.POST["message"]
+        comment.post = get_object_or_404(Blog, pk=id)
+        comment.author = request.user
+        if len(comment.message) == 0:
+            return redirect("free_borad_detail", comment.post.id, {"msg":"공백입니다."})
+        # if is_msg_blank(comment.message):
+        #     return render(request, "free_borad_detail.html",{"msg":"공백 입니다."})
+        comment.save()
+        return redirect("free_borad_detail", comment.post.id)
+        return HttpResponse(len(comment.message))
     return render(request,'free_comment_create.html')
     
 
@@ -223,5 +244,11 @@ def is_pw_blank(username, user, email):
         return True
     return False
 
-def updateuser(request):
-    return render(request, "updateuser.html")
+def is_msg_blank(message):
+    if len(message) == 0:
+        return True
+    return False
+
+def update_user(request, id):
+    user = get_object_or_404(User, pk=id)
+    return render(request,"update_user.html",{"user":user})

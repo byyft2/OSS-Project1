@@ -1,20 +1,22 @@
-from django.shortcuts import render,redirect, get_object_or_404, Http404
+from django.shortcuts import render,redirect, get_object_or_404, Http404 ,HttpResponse
 from .models import Continent, Continent_blog
 from django.contrib.auth.decorators import login_required
 from .forms import *
 from django.core.paginator import Paginator
-from django.contrib.auth.decorators import login_required
 
 
 # Create your views here.
 def companygogo(request):
     blogs = Continent_blog.objects.all()
+    list = request.GET.get("list")
+    CL = request.GET.get("countrylist")
+    if list:
+        blogs = blogs.filter(title__contains=list)
+    if CL:
+        blogs = blogs.filter(country__contains=CL)
     paginator = Paginator(blogs, 10)
     page = request.GET.get('page')
     posts = paginator.get_page(page)
-    list = request.GET.get("list")
-    if list:
-        blogs = blogs.filter(title=list)
     return render(request, "companytest.html", {'blogs':blogs, 'posts':posts})
 
 def company_detail(request, id):
@@ -44,6 +46,8 @@ def company_update(request,id):
         blog.hashtag = request.POST["concept"]
         blog.start_at = request.POST["startday"]
         blog.comeback_at = request.POST["comebackday"]
+        if blog.start_at > blog.comeback_at:
+            return redirect("company_update",id)
         blog.save()
         return redirect("company_detail",id)
     return Http404()
@@ -93,8 +97,7 @@ def drawChart(request):
     c = 4
     lista = [a, b, c]
     return render(request, 'companychart.html', {'aa': lista})
-
-@login_required
+ 
 def continentcreate(request):
     if request.method == 'POST':
         form = CompanyForm(request.POST)
@@ -106,29 +109,25 @@ def continentcreate(request):
         startday = request.POST["startday"]
         comebackday = request.POST["comebackday"]
         author = request.user
-        #form = CompanyForm(request.POST)
-        #sibal = Continent_blog.objects.create(title = title, content = content, continent = continent_name, country = country, hashtag = concept, start_at = startday, comeback_at = comebackday)
-        #sibal.save()
         form = CompanyForm(request.POST)
+        if startday > comebackday:
+            return render(request, "company_create.html",{"msg":"도착일이 출발일보다 빠를수는 없습니다."})
+        if len(title) < 1 or len(content) < 1:
+            return render(request, "company_create.html",{"msg":"공백이 있으면 안됩니다.", "post": obj})
+        if len(continent_name) < 1:
+            return render(request, "company_create.html",{"msg":"대륙을 선택해주세요."})
+        if len(country) < 1:
+            return render(request, "company_create.html",{"msg":"나라를 선택해주세요."})
+        if len(startday) < 1 or len(comebackday) < 1:
+            return render(request, "company_create.html",{"msg":"날짜를 선택해주세요."})
         obj= Continent_blog(title = title, content = content, continent = continent_name, country = country, hashtag = concept, start_at = startday, comeback_at = comebackday, author = author)
         obj.save()
-       # form.author=request.user
-        #form.save()
-        return redirect('companytest')
     elif request.method == 'POST':
         form = CompanyForm()
         return render(request, 'company_create.html', {'form': form})
-       # continent = (title=title, content=content, continent_name=continenet_name, country=country, concept=concept, startday=startday, comebackday=comebackday)
-       # continent.save()
-        #if form.is_valid():
-         #   title = 
-          #  continent_blog = form.save(commit=False)
-           # continent_blog.author = request.user
-            #continent_blog.save()
-            #return redirect('companygogo')
-    #else:
-     #   form = CompanyForm()
-
+    return redirect(companygogo)
+       
+@login_required
 def continentcreatego(request):
     return render(request, 'company_create.html')
 

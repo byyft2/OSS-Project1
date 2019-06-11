@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+{% load staticfiles %}
+<html lang="en">
+
+<head>
+
+   {% block head %}
+
+  <title>Travel Ocean 북아메리카 - 캐나다 </title>
+
+  {% endblock %}
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  {% block content %}
+
+  <!-- Page Content -->
+  <div class="container">
+
+    <!-- Page Heading/Breadcrumbs -->
+    <h1 class="mt-4 mb-3">캐나다 
+      <small><span style="color:rgb(0, 0, 0)">Canada</span>
+            
+            </small>
+    </h1>
+
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item">
+      <a href="{% url 'main' %}">Home</a>
+      </li>
+      <li class="breadcrumb-item active">Canada</li>
+    </ol>
+
+    <!-- Intro Content -->
+    <div class="row">
+      <div class="col-lg-6">
+        <img class="img-fluid rounded mb-4" src="{% static 'img/country/Canada/Canada.png'  %}" alt="">
+      </div>
+      <div class="col-lg-6">
+         <div style='line-height:200%'>
+        <p>북아메리카에 위치한 국가. 총 10개의 주와 3개의 준주로 이루어진 연방국가로 북극과 가장 가까운 나라 중 하나이며 나라의 상징은 설탕단풍나무(Sugar Maple. 팬케이크의 양념인 메이플 시럽의 원료)와 비버다.<br>
+            수도는 오타와, 현재 가장 큰 도시는 토론토, 두 번째로 큰 도시는 몬트리올이며 그 외에 밴쿠버, 캘거리, 에드먼턴, 퀘벡 시티, 위니펙, 핼리팩스,새스커툰 등이 주요 도시다.</p>
+        
+    </div>
+      </div>
+    </div>
+    <!-- /.row -->
+<br>
+    <!-- Team Members -->
+    <h2>꿀팁 & 주의할 점</h2>
+
+    <div class="row">
+      <div class="col-lg-4 mb-4">
+        <div class="card h-100 text-center">
+          <img class="card-img-top"  src="{% static 'img/country/Canada/Canada_1.jpg'  %}" alt="">
+          <div class="card-body">
+            <p class="card-text">1. 캐나다에 입국할 때 소시지 및 라면 소지가 금지되어 있다. 발각이 되면 압수 및 폐기(세관신고서에 기입 시)또는 벌금을 물을 수 있다.<br><br>
+                    2. 캐나다는 입국 심사가 특히 까다로운 편이며 출입국 관리 직원들로부터 입국 목적 등에 대한 상세한 질문을 받게 된다. 입국 목적을 명확히 설명해야 하며
+                    친지 방문시에는 캐나다내 친지의 연락처를 밝혀야 한다.<br><br>
+                    3. 캐나다는 국토 면적이 매우 넓을 뿐만 아니라, 대서양과 태평양 연안을 모두 끼고 있어 기상 변화가 매우 잦고 기폭이 심하다.<br>
+                    보온이나 방수를 위한 기능성 의류가 필요하며, 지역마다 날씨가 다르니 다양한 옷들을 준비하는 것이 좋다.
+                    북미는 비가 와도 우산을 잘 쓰지 않는다고 하니 우산 대신 일회용 우비를 챙기는 것도 좋다.
+                </p>
+         </div> 
+        </div>
+      </div>
+      <div class="col-lg-4 mb-4">
+        <div class="card h-100 text-center">
+          <img class="card-img-top"  src="{% static 'img/country/Canada/Canada_2.jpg'  %}" alt="">
+          <div class="card-body">
+            <p class="card-text">4. 자외선 수치가 매우 높기 때문에 캐나다에서는 외출 필수용품으로 선글라스를 착용한다고 한다. 우리나라보다 눈이 훨씬 많이 내리고 늦게 녹기 때문에
+                    평소보다 더 많은 수치의 자외선이 반사되기 때문에 외출시 선글라스나 선크림은 필수이다.<br><br>
+                    5. 캐나다는 우리나라 보다 매우 건조하기 때문에(특히 겨울) 피부 수분을 유지할 수 있는 화장품이나 마스크 팩등을 준비하면 좋다.<br><br>
+                    6. 기본 전압이 110V이기 때문에 변환 어댑터와 변압기를 가져와야 한다.
+                    
+                </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 mb-4">
+        <div class="card h-100 text-center">
+          <img class="card-img-top"  src="{% static 'img/country/Canada/Canada_3.jpg'  %}" alt="">
+          <div class="card-body">
+            <p class="card-text">7. 캐나다는 저녁 8시가 되면 쥐 죽은 듯이 조용해진다.실제 어느 주택가에서는 저녁 8시가 되면 대부분의 주택 불이 꺼지고 사람들이 말하는 소리, 걸어가는 소리,
+                    자동차 문이나 현관문을 여닫느 소리가 거의 들리지 않는다고 한다.외부의 소음으로 다른 사람의 수면을 방해하지 않으려는 노력이 있기 때문이다.<br><br>
+                    8. 레스토랑에서 음식 값의 15~20%의 팁을 주어야 한다. 필수는 아니지만 주지 않는다면 무례하다고 느낄 수 있다.<br><br>
+                    9. 캐나다에는 야생지역이 매우 많다. 외곽 시골지역으로 가게 되면 그 지역에 어떤 동물들이 있는지 생각해야 한다. 몇몇 지역에는 곰, 퓨마등이 있으니
+                    조심하는게 좋다.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /.row -->
+<br>
+    
+    <h2>대표 음식</h2>
+
+    <div class="row">
+      <div class="col-lg-4 mb-4">
+        <div class="card h-100 text-center">
+          <img class="card-img-top"  src="{% static 'img/country/Canada/Canada_food1.jpg'  %}" alt="">
+          <div class="card-body">
+            <h4 class="card-title">감자튀김 요리 푸틴</h4>
+            <p class="card-text">감자튀김 요리인 푸틴(Poutine)은 프렌치프라이 위에 각종 고기와 채소, 치즈 커드, 그레비 소스를 얹혀 만든 캐나다 전통 감자튀김 요리이다.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 mb-4">
+        <div class="card h-100 text-center">
+          <img class="card-img-top"  src="{% static 'img/country/Canada/Canada_food2.jpg'  %}" alt="">
+          <div class="card-body">
+            <h4 class="card-title">아이스 와인</h4>
+            <p class="card-text">캐나다 아이스와인은 품질과 맛이 좋기로 세계적으로도 유명하다. 아이스와인은 서리가 내릴때까지 수확하지 않았던 포도를 이용해서 만든 와인이다. </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 mb-4">
+        <div class="card h-100 text-center">
+          <img class="card-img-top"  src="{% static 'img/country/Canada/Canada_food3.jpg'  %}" alt="">
+          <div class="card-body">
+            <h4 class="card-title">메이플 시럽</h4>
+            <p class="card-text">캐나다는 전 세계 메이플 시럽 생산량의 75%를 담당하고 있는 메이플 시럽 주요 생산 국가이다.<br>메이플 시럽은 당뇨병 예방과 치료에 도움이 되며 암을 예방하는 항산화 효과도 있다.<br>
+                또한 필수 미네랄이 풍부해 노화방지에도 효과적이며, 당도에 비해 칼로리가 낮다.</p>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+    <h2>명소</h2>
+
+    <div class="row">
+      <div class="col-lg-4 mb-4">
+        <div class="card h-100 text-center">
+          <img class="card-img-top"  src="{% static 'img/country/Canada/Canada_sights1.jpg'  %}" alt="">
+          <div class="card-body">
+            <h4 class="card-title">스탠리 파크</h4>
+            <p class="card-text">관광객들에게는 물론 밴쿠버 현지인들에게도 인기 있는 공원인 스탠리 파크는 캐나다 브리티시 컬럼비아 주 밴쿠버 다운타운에 접한 도시 공원이다.
+                    스탠리파크는 약 1000에이크나 되는 공원이기에 공원내 호수도 두 곳이나 있다.<br><br>
+                    그 중 한 곳인 Lost Lagoon은 인공 호수로 스탠리파크 입구 부근에 위치해 있다. 1.75km 트레일로 호수를 둘러싸고 있고 중간에는 분수가 있다. 
+                    로스트라쿤에는 다양한 종류의 새들과 백조, 캐나다구스,오리,왜가리들이 있다.<br><br>
+                    Beaver Lake는 이름에서 알수 있듯이 비버들의 서식지인 자연호수이다. 이 호수는 여러곳의 트레일이 합쳐지는 곳이라서 산책을 하면서 호수를 구경하기에 좋은 장소이다. 
+                    </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 mb-4">
+        <div class="card h-100 text-center">
+          <img class="card-img-top"  src="{% static 'img/country/Canada/Canada_sights2.jpg'  %}" alt="">
+          <div class="card-body">
+            <h4 class="card-title">밴프 국립공원</h4>
+            <p class="card-text">밴프 국립공원은 꼭 가봐야 할 자연의 모든 아름다움을 한 곳에 간직하고 있는 캐나다 록키산맥 관광의 중심이다.<br>
+                캐나다에서 가장 오래된 국립공원으로, 로키 산맥에서 1885년에 설립되었다.<br><br>내부에 모레인호가 있다. 모레인호는 밴프 국립공원에 있는 빙하로 덮인 호수로, 캐나다 앨버타주 루이스호 빌리지 밖으로
+                14 킬로미터 떨어진 지점에 위치해 있다. <br>
+                
+
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 mb-4">
+        <div class="card h-100 text-center">
+          <img class="card-img-top"  src="{% static 'img/country/Canada/Canada_sights3.jpg'  %}" alt="">
+          <div class="card-body">
+            <h4 class="card-title">CN 타워</h4>
+            <p class="card-text">CN 타워는 토론토의 랜드마크로 1976년에 캐나다 토론토에 세워진 높이 553.33m의 탑이다.<br><br>시내와 호수 뷰를 360도 구경이 가능해서 토론토를 보려면 필수 방문코스다. 다만 성인 1인당 36 캐나다 달러로 다소 비싼게 흠이다.<br><br>
+                특히 맑은 날에 가야 탁트인 광경을 맘껏 느낄 수 있다.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+      <br>
+    <h2>알아두면 좋아요!</h2>
+
+    <div class="row">
+      <div class="col-lg-4 mb-4">
+        <div class="card h-100 text-center">
+          <img class="card-img-top" src="{% static 'img/country/meal.jpg' %}" alt="">
+          <div class="card-body">
+            <h4 class="card-title">식사 예절</h4>
+            <p class="card-text">1. 캐나다에서는 다른 사람과 식사 속도를 맞추어 다른 사람이 식사가 끝날 때 까지 먼저 자리를 뜨면 안 된다.<br><br>
+                    2. 야외에서는 술을 마실 수 없다.<br><br>
+                    3. 웨이터나 종업원을 부를 때 큰 소리로 부르면 안 된다.<br><br>
+                    4. 국물은 숟가락으로 떠서 먹어야 하며 면이나 뜨거운 차 등을 먹을 때에도 소리가 나면 안 된다.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 mb-4">
+        <div class="card h-100 text-center">
+          <img class="card-img-top"src="{% static 'img/country/climate.jpg' %}" alt="">
+          <div class="card-body">
+            <h4 class="card-title">기후</h4>
+            <p class="card-text">대체적으로 캐나다는 확연히 구분되는 사계절을 가지고 있다. 한 여름 낮의 기온은 35℃나 그 이상까지 오르며, 겨울에는 영하25℃까지 기온이 내려갈 수 있다.<br><br>
+                여름의 초원지방은 뜨겁고 건조하며, 중앙 캐나다 지역은 다습한데 반해 해안 지방은 온화한 기후를 보여준다. 봄은 캐나다 전반에 걸쳐서 온화하며, 가을은 종종 신선하고 시원하다.<br><br>
+                밴쿠버와 빅토리아 같은 서부 해안도시에서의 겨울은 온화하고 다습하다
+            </p> 
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 mb-4">
+        <div class="card h-100 text-center">
+          <img class="card-img-top"src="{% static 'img/country/Canada_language.png' %}" alt="">
+          <div class="card-body">
+            <h4 class="card-title">사용하는 언어</h4>
+            <p class="card-text">캐나다 연방의 공식 언어는 영어와 프랑스어이지만, 퀘벡주에서는 프랑스어를 공식 언어로 채택하고 있으며,<br>뉴 브룬스위크와 노바 스코시아주에서는 영어와 프랑스어를 공용어로 채택하고 있다.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+   
+    <!-- /.row -->
+
+  </div>
+  <!-- /.container -->
+<br>
+  <!-- Footer -->
+  <footer class="py-5 bg-dark">
+    <!-- /.container -->
+  </footer>
+    
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="{% static 'jquery.js' %}"></script>
+  <script src="{% static 'bootstrap.bundle.js' %}"></script>
+ {% endblock %}
+</body>
+
+</html>

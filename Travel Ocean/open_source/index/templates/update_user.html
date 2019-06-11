@@ -1,0 +1,153 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% block head %}<title>Travel Ocean 정보수정</title>
+    <link href="https://fonts.googleapis.com/css?family=Anton&display=swap&subset=latin-ext,vietnamese" rel="stylesheet">
+     <style>
+      p {
+        font-family: 'Anton', sans-serif;
+        font-size: 80px;
+        text-indent: 1em;
+      }
+          .btn1{
+             margin-left: 8%;
+    width:9.8%;
+             height:10%;
+}
+          </style>
+    <h1>
+       <p class="p">Edit personal information</p>
+    </h1>
+    {% endblock %}
+</head>
+<body>
+    {% block content %}
+        <form action="{% url 'testgogogo' %}" method="POST" enctype="multipart/form-data">
+                            {% csrf_token %}
+    <table>
+     <tr>
+         <th>
+         <label for="id_username">사용자 이름:</label>
+     </th>
+        <td>
+            <input type="text" name="username" value="{{user.username}}" maxlength="150" required="" id="id_username">
+
+        </td>
+        </tr>
+        <tr>
+            <th>
+         <label for="id_name">Name:</label>
+     </th>
+        <td>
+<input type="text" name="name" value="{{user.name}}" maxlength="10" required="" id="id_name"> 
+        </td>
+        </tr>
+         <tr>
+            <th>
+         <label for="id_phone">Phone:</label>
+     </th>
+        <td>
+<input type="text" name="phone" value="{{user.phone}}" maxlength="15" required="" id="id_phone" pattern="[0-9]{3}[0-9]{4}[0-9]{4}">
+             </td>
+        </tr>
+        <tr>
+            <th>
+         <label for="id_birth">Birth:</label>
+     </th>
+        <td>
+<input type="text" name="birth" value="{{user.birth}}" maxlength="10" required="" id="id_birth">            
+            </td>
+        </tr>
+             <tr>
+            <th>
+         <label for="id_email">이메일 주소:</label>
+     </th>
+        <td>
+<input type="email" name="email" value="{{user.email}}" maxlength="254" id="id_email">            
+            </td>
+        </tr>
+                  <tr>
+            <th>
+         <label for="id_password">새 비밀번호:</label>
+     </th>
+        <td>
+<input type="password" name="pw1"  maxlength="254" id="pw1">            
+            </td>
+        </tr>
+              <tr>
+            <th>
+         <label for="id_password_check">한번더 입력:</label>
+     </th>
+        <td>
+<input type="password" name="pw2"  maxlength="254" id="pw2">            
+            </td>
+        </tr>
+        </table>
+            <div id="notEqual" style="display:none">
+            비밀번호가 동일하지 않습니다.
+        </div>
+        <div id="notLength" style="display:none">
+            비밀번호는 8자 이상으로 해주세요.
+        </div>
+            <input type="button" style="width:135px;height:30px;" onclick="passwordcheck()" value="비밀번호 결정">
+            <input type="button" style="width:135px;height:30px;" onclick="rewrite()" value="비밀번호 재설정">
+              <input type="submit" id="complete" style="width:200px;height:60px;" class="btn1" value="변경" disabled="disabled">
+    </form>
+    <script>window.onload=function()
+        {
+            //var a =  document.getElementsByName('username')[0];
+            //a.readOnly="true";
+            document.getElementsByName('username')[0].readOnly="true";
+            document.getElementsByName('name')[0].readOnly="true";
+            document.getElementsByName('phone')[0].readOnly="true";
+            document.getElementsByName('birth')[0].readOnly="true";
+            document.getElementsByName('email')[0].readOnly="true";
+        }</script>
+    <script>
+        function rewrite(){
+            document.getElementById("pw1").value="";
+            document.getElementById("pw2").value="";
+            document.getElementById("complete").disabled = true;
+            document.getElementById("pw2").readOnly=false;
+            document.getElementById("pw1").readOnly=false;
+        }
+        function passwordcheck(){
+            var a = document.getElementById("pw1").value;
+            var b = document.getElementById("pw2").value;
+            var c = document.getElementById("pw1");
+            var d = document.getElementById("pw2");
+            if (a != b){
+                document.getElementById("notLength").style.display="none";
+                document.getElementById("notEqual").style.display="block";
+                document.getElementById("pw1").value="";
+                document.getElementById("pw2").value="";
+            }
+            else if(a == b){
+                if(a.length < 8){
+                    document.getElementById("notEqual").style.display="none";
+                    document.getElementById("notLength").style.display="block";
+                    document.getElementById("pw1").value="";
+                    document.getElementById("pw2").value="";
+                    
+                }
+                else{
+                document.getElementById("notEqual").style.display="none";
+                 document.getElementById("complete").disabled = false;
+                c.readOnly="true";
+                d.readOnly="true";
+                
+                }
+            }
+            
+        
+        }
+    </script>
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="{% static 'jquery.js' %}"></script>
+  <script src="{% static 'bootstrap.bundle.js' %}"></script>
+    {% endblock %}
+</body>
+</html>
