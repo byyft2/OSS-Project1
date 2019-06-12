@@ -48,9 +48,9 @@
             <form action="{% url 'free_comment_create' blog.id %}" method="POST">
                    {% csrf_token %}
               <div class="form-group">{{msg}}
-                <textarea name="message" class="form-control" rows="3"></textarea>
+                <textarea id="comment12" onmouseenter="check()" name="message" class="form-control" placeholder="3글자 이상!!" rows="3"></textarea>
               </div>
-              <button type="submit" class="btn btn-primary">댓글 달기</button>
+              <button type="submit" onmouseenter="check()" id="datgle" class="btn btn-primary">댓글 달기</button>
             </form>
           </div>
         </div>
@@ -70,7 +70,18 @@
             </div>
           </div>
              </div>
-           
+           <script>
+        function check(){
+            var a = document.getElementById("datgle");
+            var b = document.getElementById("comment12").value;
+            if(b.length < 3){
+              a.disabled=true;
+            }
+            if(b.length >3){
+              a.disabled=false;
+            }
+        }
+    </script>
        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script src="{% static 'jquery.js' %}"></script>
   <script src="{% static 'bootstrap.bundle.js' %}"></script>

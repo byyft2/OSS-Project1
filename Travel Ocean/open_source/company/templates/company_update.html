@@ -6,42 +6,42 @@
 <head>
     {% block head %}<title>Travel Ocean 동행게시판</title>
     <style>
-        input.relative{
+        input.countrySelect{
              position: relative;
              left: 845px;
              bottom: 320px;
          }
-        input.relative1{
+        input.buttons{
              position: relative;
              left: 45px;
              bottom: 50px;
          }
-    select.relative{
+    select.asiaSelect{
              position: relative;
              left: 217px;
              bottom: 216px;
          }
-         select.relative1{
+         select.africaSelect{
              position: relative;
              left: 217px;
              bottom: 216px;
          }
-         select.relative2{
+         select.europeSelect{
              position: relative;
              left: 216px;
              bottom: 216px;
          }
-         select.relative3{
+         select.americaSelect{
              position: relative;
              left: 217px;
              bottom: 216px;
          }
-         select.relative4{
+         select.oceaniaSelect{
              position: relative;
              left: 216px;
              bottom: 216px;
          }
-         select.relative5{
+         select.antarcticaSelect{
              position: relative;
              left: 216px;
              bottom: 216px;
@@ -62,7 +62,7 @@
     컨셉 : <input type="text" name="concept" value="{{ blog.hashtag }}"><br><br>
     출발 : <input type="date" name="startday" value="{{ blog.start_at }}"> 도착일을 출발일보다 빠르게 설정시 저장을 거부합니다.<br><br>
     복귀 : <input type="date" name="comebackday" value="{{ blog.comeback_at }}"><br><br>
-        <select id="aseea" class="relative" style="width:100px;height:30px;"  disabled = True>
+        <select id="aseea" class="asiaSelect" style="width:100px;height:30px;"  disabled = True>
   <option>대한민국</option>
   <option>일본</option><option>몽골</option>
   <option>대만</option><option>중국</option>
@@ -87,7 +87,7 @@
   <option>키프로스</option><option>터키</option>
   <option>팔레스타인</option><option>조지아</option>
 </select>
-        <select id="afreeca" class="relative1" style="width:100px;height:30px;"  disabled = True>
+        <select id="afreeca" class="africaSelect" style="width:100px;height:30px;"  disabled = True>
   <option>코모로</option><option>지부티</option><option>에리트레아</option>
   <option>에티오피아</option><option>케냐</option><option>세이셸</option><option>소말리아</option>
   <option>소말릴란드</option><option>탄자니아</option><option>중앙아프리카</option>
@@ -104,7 +104,7 @@
   <option>모잠비크</option><option>나미비아</option><option>남아프리카공화국</option><option>잠비아</option>
   <option>짐바브웨</option>
 </select>
-        <select id="youlove" class="relative2" style="width:100px;height:30px;"  disabled = True>
+        <select id="youlove" class="europeSelect" style="width:100px;height:30px;"  disabled = True>
   <option>포르투갈</option><option>몰타</option><option>스페인</option>
   <option>산마리노</option><option>바티칸시국</option><option>세르비아</option><option>몬테네그로</option>
   <option>슬로베니아</option><option>그리스</option><option>보스티아</option>
@@ -118,7 +118,7 @@
   <option>독일</option><option>스위스</option><option>안도라</option><option>모나코</option>
   <option>오스트리아</option><option>리히텐슈타인</option><option>
 </select>
-        <select id="americano" class="relative3" style="width:100px;height:30px;"  disabled = True>
+        <select id="americano" class="americaSelect" style="width:100px;height:30px;"  disabled = True>
             <option>미국</option><option>캐나다</option><option>멕시코</option>
   <option>과테말라</option><option>그레나다</option><option>니카라과</option><option>도미니카공화국</option>
   <option>도미니카연방</option><option>바베이도스</option><option>바하마</option>
@@ -130,21 +130,21 @@
   <option>에콰도르</option><option>우르과이</option><option>칠레</option><option>콜롬비아</option>
   <option>파라과이</option><option>페루
         </select>
-        <select id="ocean" class="relative4" style="width:100px;height:30px;"  disabled = True>
+        <select id="ocean" class="oceaniaSelect" style="width:100px;height:30px;"  disabled = True>
             <option>나우루</option><option>뉴질랜드</option><option>마셜 제도</option>
   <option>미크로네시아 연방</option><option>바누아투</option><option>사모아</option><option>솔로몬 제도</option>
   <option>오스트레일리아</option><option>키리바시</option><option>통가</option>
   <option>투발루</option><option>파푸아뉴기니</option><option>팔라우</option><option>피지</option>
         </select>
-        <select id="mangk" class="relative5" style="width:100px;height:30px;"  disabled = True><option>남극</option></select>
+        <select id="mangk" class="antarcticaSelect" style="width:100px;height:30px;"  disabled = True><option>남극</option></select>
         
 <br><br>
     
-     <input class ="relative1" style="width:165px;height:50px;" type="submit" name="btn1" value="저장하기";>
-                              <input class ="relative1" type="button" style="width:165px;height:50px;"  value="뒤로가기" onclick="history.back(-1);">
+     <input class ="buttons" style="width:165px;height:50px;" type="submit" name="btn1" value="저장하기";>
+                              <input class ="buttons" type="button" style="width:165px;height:50px;"  value="뒤로가기" onclick="history.back(-1);">
 
 </form>
-    <input type="button"  onclick="choice()" value="나라 선택" class="relative">
+    <input type="button"  onclick="choice()" value="나라 선택" class="countrySelect">
      <script language="javascript">
          function choice() {
              var continent = document.getElementById("test").value;

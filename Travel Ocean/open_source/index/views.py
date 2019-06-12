@@ -39,8 +39,8 @@ def signup(request):
         birth = request.POST["birth"]
         email = request.POST["email"]
         pwlen = len(password)
-        birth1 = birth[0:4]
-        birthcheck = int(birth1)
+        if len(birth[0:4]) == 0:
+            return render(request, "signup.html",{"msg":"공백 입니다."})
         if User.objects.filter(username=username).exists():
             return render(request, "signup.html",{"msg":"이미 존재하는 ID입니다."})
         if is_blank(username, password, password_check, name, phone, birth, email):
@@ -193,13 +193,13 @@ def free_comment_create(request, id):
         comment.message = request.POST["message"]
         comment.post = get_object_or_404(Blog, pk=id)
         comment.author = request.user
-        if len(comment.message) == 0:
-            return redirect("free_borad_detail", comment.post.id, {"msg":"공백입니다."})
+        #if len(comment.message) == 0:
+            #return redirect("free_borad_detail", comment.post.id, {"msg":"공백입니다."})
         # if is_msg_blank(comment.message):
         #     return render(request, "free_borad_detail.html",{"msg":"공백 입니다."})
-        comment.save()
+        comment.save()        
         return redirect("free_borad_detail", comment.post.id)
-        return HttpResponse(len(comment.message))
+        #return HttpResponse(len(comment.message))
     return render(request,'free_comment_create.html')
     
 

@@ -9998,6 +9998,11 @@ ul {
 }
 .pull-right{
   float: right !important
+}     
+    .kakao{
+display: block;
+margin-left: auto;
+margin-right: auto;
 }
 
 /*# sourceMappingURL=bootstrap.css.map */

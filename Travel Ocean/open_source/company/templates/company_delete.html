@@ -6,40 +6,39 @@
 <head>
 {% block head %}
   <meta charset="utf-8">
-  <title>Travel Ocean 자유게시판</title>
-            <link href="https://fonts.googleapis.com/css?family=Anton&display=swap&subset=latin-ext,vietnamese" rel="stylesheet">
-
-      <style>
-      p {
+    <link href="https://fonts.googleapis.com/css?family=Anton&display=swap&subset=latin-ext,vietnamese" rel="stylesheet">
+    <style>
+    p {
         font-family: 'Anton', sans-serif;
         font-size: 80px;
         text-indent: 1em;
       }
-        input.relative{
+        input.deleteButton{
              position: relative;
              left: 93px;
              bottom: 0px;
         }
-        input.relative1{
+        input.backButton{
              position: relative;
              left: 103px;
              bottom: 0px;
-        }</style>
- 
+        }
+        </style>
+  <title>Travel Ocean 동행게시판</title>
 {% endblock %}
-  
+ 
 </head>
 
 <body>
   {% block content %}
 
-    <form action="{% url 'free_comment_delete' post.id %}" method="POST">
+    <form action="{% url 'company_delete' blog.id %}" method="POST">
         {% csrf_token %}
-          <h1>
+        <h1>
        <p class="p" id="item">Commend Delete</p>
     </h1>
-   <input class="relative" style="width:250px; height:50px; letter-spacing: 1px" type="submit" value="삭제하기">
-        <input class="relative1" style="width:250px; height:50px; letter-spacing: 1px" type="button" value="뒤로가기" onclick="history.back(-1);">
+    <input class="deleteButton" style="width:250px; height:50px; letter-spacing: 1px" type="submit" value="삭제하기">
+        <input class="backButton" style="width:250px; height:50px; letter-spacing: 1px" type="button" value="뒤로가기" onclick="history.back(-1);">
     </form>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script src="{% static 'jquery.js' %}"></script>

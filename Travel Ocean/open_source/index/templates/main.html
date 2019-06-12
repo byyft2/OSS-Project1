@@ -4,7 +4,9 @@
 <html lang="en">
 
 <head>
+<style>
 
+    </style>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
@@ -64,12 +66,7 @@
  
     <h1 class="my-4">Welcome Travel Ocean! </h1>
 <br>
- 
-    <!-- /.row -->
-
-    <!-- Portfolio Section -->
-    
-{% if not user.is_authenticated %}
+ {% if not user.is_authenticated %}
     <div class="row-1">
       <div class="login-form">
     <form action="{% url 'main' %}" method="POST">
@@ -170,20 +167,22 @@
           </div>
         </div>
       </div>
+    </div><a href="http://pf.kakao.com/_GcxiCT">
+         <img class="kakao" src="../static/img/kakao.png" alt="">
+      </a>
     </div>
-    </div>
+    <br>
   <!-- /.container -->
 
   <!-- Footer -->
   <footer class="py-5 bg-dark">
+    
     <div class="container">
-      
     
         </div>
    
     <!-- /.container -->
   </footer>
-
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script src="{% static 'jquery.js' %}"></script>
   <script src="{% static 'bootstrap.bundle.js' %}"></script>

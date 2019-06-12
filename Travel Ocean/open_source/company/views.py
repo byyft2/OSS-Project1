@@ -29,8 +29,10 @@ def company_delete(request,id):
     blog = get_object_or_404(Continent_blog, pk=id)
     if blog.author != request.user:
         return redirect("main")
-    blog.delete()
-    return redirect("companytest")
+    if request.method=='POST':
+        blog.delete()
+        return redirect("companytest")
+    return render(request, "company_delete.html",{"blog":blog})
 
 @login_required
 def company_update(request,id):
@@ -113,7 +115,7 @@ def continentcreate(request):
         if startday > comebackday:
             return render(request, "company_create.html",{"msg":"도착일이 출발일보다 빠를수는 없습니다."})
         if len(title) < 1 or len(content) < 1:
-            return render(request, "company_create.html",{"msg":"공백이 있으면 안됩니다.", "post": obj})
+            return render(request, "company_create.html",{"msg":"공백이 있으면 안됩니다."})
         if len(continent_name) < 1:
             return render(request, "company_create.html",{"msg":"대륙을 선택해주세요."})
         if len(country) < 1:
